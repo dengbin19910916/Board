@@ -2,8 +2,8 @@
 <template:basic htmlTitle="Support Chat" bodyTitle="Support Chat">
     <jsp:attribute name="extraHeadContent">
         <link rel="stylesheet"
-              href="<c:url value="/resource/stylesheet/chat.css" />"/>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+              href="<c:url value="/resources/stylesheet/chat.css" />"/>
+        <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
     </jsp:attribute>
     <jsp:body>
         <div id="chatContainer">
@@ -11,7 +11,7 @@
 
             </div>
             <div id="messageContainer">
-                <textarea id="messageArea"></textarea>
+                <textarea id="messageArea" title="聊天日志"></textarea>
             </div>
             <div id="buttonContainer">
                 <button class="btn btn-primary" onclick="send();">Send</button>
@@ -81,7 +81,7 @@
                 }
 
                 server.onopen = function (event) {
-                    infoMessage('Connected to the chat server.');
+                    infoMessage('Connected to the chat server.' + event.toString());
                 };
 
                 server.onclose = function (event) {

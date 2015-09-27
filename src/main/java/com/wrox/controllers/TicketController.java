@@ -4,6 +4,8 @@ import com.wrox.controllers.forms.DownloadingView;
 import com.wrox.entities.Attachment;
 import com.wrox.entities.Ticket;
 import com.wrox.services.TicketService;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,8 @@ import java.security.Principal;
 import java.util.List;
 
 /**
+ * 处理票据。
+ *
  * Created by dengb on 2015/9/9.
  */
 @Controller
@@ -101,16 +105,26 @@ public class TicketController {
             } catch (IOException e) {
                 log.warn("文件上传失败！ ", e);
             }
-            if ((attachment.getName() != null && attachment.getName().length() > 0) ||
-                    (attachment.getContents() != null && attachment.getContents().length > 0)) {
+            if (StringUtils.isNotEmpty(attachment.getName()) || ArrayUtils.isNotEmpty(attachment.getContents())) {
                 ticket.addAttachment(attachment);
             }
+            /*if ((attachment.getName() != null && attachment.getName().length() > 0) ||
+                    (attachment.getContents() != null && attachment.getContents().length > 0)) {
+                ticket.addAttachment(attachment);
+            }*/
         }
         this.ticketService.save(ticket);
 
         return "redirect:/ticket/view/" + ticket.getId();
     }
 
+    /**
+     * 下载票据中的附件。
+     *
+     * @param ticketId 票据号
+     * @param name 附件名称
+     * @return 下载视图对象
+     */
     @RequestMapping("{ticketId:\\d+}/attachment/{attachment:.+}")
     public View download(@PathVariable("ticketId") long ticketId, @PathVariable("attachment") String name) {
         Ticket ticket = this.ticketService.getTicket(ticketId);
@@ -182,6 +196,7 @@ public class TicketController {
             return attachments;
         }
 
+        @SuppressWarnings("unused")
         public void setAttachments(List<MultipartFile> attachments) {
             this.attachments = attachments;
         }
