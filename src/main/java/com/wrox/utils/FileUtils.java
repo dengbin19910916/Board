@@ -41,24 +41,63 @@ public final class FileUtils {
     }
 
     /**
-     * 返回系统的文件（夹）路径。
-     * 路径获取顺序为：
-     * 1.读取数据库SYSTEM_CONFIG中的PATH
-     * 2.读取配置文件system_config.properties中的path
-     * 3.获取服务器路径
+     * 返回文件所在目录，已经处理相对路径与绝对路径。
      *
-     * @param path 文件名/文件夹名
-     * @return 文件路径/文件夹路径
+     * @param path 文件路径
+     * @return 文件所在目录
      */
-    public static Path getPath(String path) {
-        Path serverPath = Paths.get(System.getProperty("user.dir"), "..");
-        return null;
+    public static String getDirectory(String path) {
+        String directory;
+        int fileNameIndex;
+
+        String regex = PathType.valueOf(SystemUtils.getOSType().toString()).toString();
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(path);
+
+        path = path.replaceAll("[<> ]", "");
+        if (SystemUtils.getOSType() == SystemUtils.OSType.WINDOWS) {
+            int fileTypeIndex = path.lastIndexOf(".");
+            directory = path.substring(0, fileTypeIndex).replaceAll("[./|:\"*?]", "\\\\");
+            fileNameIndex = directory.lastIndexOf("\\");
+        } else {
+            directory = path.replaceAll("[\\\\|:\"*?]", "/");
+            fileNameIndex = directory.lastIndexOf("/");
+        }
+
+        if (!matcher.matches()) {    // filepath是相对路径
+            return getBasePath() + directory.substring(0, fileNameIndex);
+        }
+        return directory.substring(0, fileNameIndex);
+    }
+
+    /**
+     * 返回文件名称。
+     *
+     * @param filepath 文件路径
+     * @return 文件名称
+     */
+    public static String getFilename(String filepath) {
+        String path, fileType, filename;
+        int fileNameIndex;
+        filepath = filepath.replaceAll("[<> ]", "");
+        if (SystemUtils.getOSType() == SystemUtils.OSType.WINDOWS) {
+            int fileTypeIndex = filepath.lastIndexOf(".");
+            path = filepath.substring(0, fileTypeIndex).replaceAll("[./|:\"*?]", "\\\\");
+            fileType = filepath.substring(fileTypeIndex);    // 文件尾缀，例如.txt，.jpg
+            fileNameIndex = path.lastIndexOf("\\");
+            filename = path.substring(fileNameIndex + 1) + fileType;
+        } else {
+            path = filepath.replaceAll("[\\\\|:\"*?]", "/");
+            fileNameIndex = path.lastIndexOf("/");
+            filename = path.substring(fileNameIndex + 1);
+        }
+        return filename;
     }
 
     /**
      * 创建文件。<br/>
-     * 文件中不能包含非法字符" < ", ">", " "，<br/>
-     * 父子路径可以使用" . "， " / "， " \ "， " | "， " : "， " " "， " * "， " ? "分隔。<br/>
+     * 文件中不能包含非法字符"<", ">", " "，<br/>
+     * 父子路径可以使用"."， "/"， "\"， "|"， ":"， """， "*"， "?"分隔，非法符号将被去除。。<br/>
      * 例如：<br/>
      * scott.ticket.attachment.a.txt => %BASE_PATH%\scott\ticket\attachment\a.txt
      *
@@ -66,35 +105,7 @@ public final class FileUtils {
      * @param contents 文件内容
      */
     public static void createFile(String filepath, byte[] contents) {
-        filepath = filepath.replaceAll("[<> ]", "");
-        String[] ds = filepath.split("[./\\\\|:\"*?]").clone(); // problem : 需要截取出文件名。
-
-        String regex = PathType.valueOf(SystemUtils.getOSType().toString()).toString();
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(filepath);
-        if (matcher.matches()) {    // 是绝对路径
-            Path file = Paths.get(filepath);    // 文件
-            Path parent = file.getParent();     // 文件所在目录
-
-            if (!Files.exists(parent)) {
-                try {
-                    Files.createDirectories(parent);
-                } catch (IOException ignored) {
-                }
-            }
-
-            try {
-                Files.deleteIfExists(file);
-                Files.createFile(file);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            String root = getBasePath();
-
-        }
-
-        createFile(Paths.get(filepath), contents);
+        createFile(getDirectory(filepath), getFilename(filepath), contents);
     }
 
     /**
@@ -109,6 +120,7 @@ public final class FileUtils {
         if (Files.exists(filepath)) {
             try {
                 Files.delete(filepath);
+                System.out.println(filepath);
                 log.info("删除同名文件[{}]。", filepath.getFileName());
             } catch (IOException e) {
                 log.warn("删除文件失败！", e);
@@ -116,7 +128,7 @@ public final class FileUtils {
         }
         try {
             path = Files.createFile(filepath);
-            log.info("文件{}已被创建[{}]。", filepath.getFileName());
+            log.info("文件{}已被创建。", filepath.getFileName());
         } catch (IOException e) {
             log.warn("创建文件失败！", e);
         }
@@ -131,7 +143,9 @@ public final class FileUtils {
      * @param contents 文件内容
      */
     public static void createFile(String directory, String filename, byte[] contents) {
-        createFile(getDirectoryPath(directory), filename, contents);
+        directory = directory.replaceAll("[<> ]", "");
+        String[] dirs = directory.split("[./\\\\|:\"*?]");
+        createFile(Paths.get(getBasePath(), dirs), filename, contents);
     }
 
     /**
@@ -146,9 +160,10 @@ public final class FileUtils {
             try {
                 Files.createDirectories(directory);
             } catch (IOException e) {
-                log.warn(String.format("创建上传根路径[%s]失败！", directory.getFileName()), e);
+                log.warn(String.format("创建路径[%s]失败！", directory.getFileName()), e);
             }
         }
+
         createFile(Paths.get(directory.toString(), filename), contents);
     }
 
@@ -173,20 +188,11 @@ public final class FileUtils {
     }
 
     /**
-     * 返回文件夹路径。
-     *
-     * @param directory 文件夹路径名，可以用“.”， “/”， “\”， “|”， “:”， “"”， “*”， “?”分隔，非法符号将被去除。
-     * @return 文件夹路径
-     */
-    public static Path getDirectoryPath(String directory) {
-        directory = directory.replaceAll("[<> ]", "");
-        String[] dirs = directory.split("[./\\\\|:\"*?]");
-
-        return Paths.get(getBasePath(), dirs);
-    }
-
-    /**
-     * 返回系统路径
+     * 返回系统路径。
+     * 路径获取顺序为：
+     * 1.读取数据库SYSTEM_CONFIG中的PATH
+     * 2.读取配置文件system_config.properties中的path
+     * 3.获取服务器路径
      *
      * @return 系统路径
      */
@@ -202,7 +208,7 @@ public final class FileUtils {
      * @return 系统路径
      */
     private static String getDefaultBasePath() {
-        return System.getProperty("user.dir") + "\\..\\board";
+        return System.getProperty("user.dir") + "\\..\\board\\";
     }
 
     /**
@@ -221,20 +227,5 @@ public final class FileUtils {
      */
     private static String getBasePathByConfigurationFile() {
         return "";
-    }
-
-    public enum SystemPath {
-        UPLOAD("upload");
-
-        private String path;
-
-        SystemPath(String path) {
-            this.path = path;
-        }
-
-        @Override
-        public String toString() {
-            return System.getProperty("user.dir") + "..\\" + this.path;
-        }
     }
 }

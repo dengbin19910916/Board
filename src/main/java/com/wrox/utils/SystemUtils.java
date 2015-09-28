@@ -7,11 +7,32 @@ package com.wrox.utils;
  */
 public final class SystemUtils {
 
+    /**
+     * 操作系统类型
+     */
     public enum OSType {
-        WINDOWS,
-        LINUX,
-        UNIX,
-        MAC
+        WINDOWS("\\"),
+        LINUX("/"),
+        UNIX("/"),
+        MAC("/");
+
+        /**
+         * 系统路径分隔符
+         */
+        private String separator;
+
+        OSType(String separator) {
+            this.separator = separator;
+        }
+
+        /**
+         * 返回系统路径分隔符。
+         *
+         * @return 系统路径分隔符
+         */
+        public String getSeparator() {
+            return separator;
+        }
     }
 
     /**

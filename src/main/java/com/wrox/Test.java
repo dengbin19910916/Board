@@ -1,9 +1,6 @@
 package com.wrox;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import com.wrox.utils.FileUtils;
 
 /**
  * Created by dengb on 2015/9/10.
@@ -65,7 +62,7 @@ public class Test {
 //        System.out.println(SystemUtils.OSType.valueOf("WINDOWS"));
 //        System.out.println(SystemUtils.getOSType());
 
-        System.out.println(System.getProperty("user.dir"));
+        /*System.out.println(System.getProperty("user.dir"));
         try {
             Path file = Paths.get("Upload\\a\\hello.txt");
             System.out.println(file.getParent());
@@ -76,6 +73,31 @@ public class Test {
             Files.createFile(file);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        /*String filepath = "scott/ticket\\attachment.a.txt <> ";
+        filepath = filepath.replaceAll("[<> ]", "");
+//        System.out.println(filepath);
+        String[] ds = filepath.split("[./\\\\|:\"*?]").clone(); // problem : 需要截取出文件名。
+//        System.out.println(Arrays.toString(ds));
+
+
+        int fileTypeIndex = filepath.lastIndexOf(".");
+//        System.out.println(fileTypeIndex);
+        String path = filepath.substring(0, fileTypeIndex).replaceAll("[./\\\\|:\"*?]", "\\\\");
+        String type = filepath.substring(fileTypeIndex);
+//        int fileNameIndex = path.la
+//        System.out.println(path);
+        System.out.println(path + "<-->" + type);
+        int fileNameIndex = path.lastIndexOf("\\");
+        String dire = path.substring(0, fileNameIndex);
+        String filename = path.substring(fileNameIndex + 1);
+        System.out.println(dire + "<-->" + filename);
+//        System.out.println("scott.ticket.attachment.a.txt <> ".contains("<"));*/
+
+//        System.out.println(SystemUtils.getOSType());
+
+        System.out.println(FileUtils.getDirectory("scott/ticket\\attachment.a.txt"));
+        System.out.println(FileUtils.getFilename("scott/ticket\\attachment.a.txt"));
     }
 }

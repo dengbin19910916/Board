@@ -7,7 +7,6 @@ import com.wrox.utils.FileUtils;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.nio.file.Path;
 import java.time.Instant;
 import java.util.List;
 
@@ -43,11 +42,9 @@ public class DefaultTicketService implements TicketService {
      * @param ticket 票据
      */
     private void saveAttachmentOnDisc(Ticket ticket) {
-        Path uploadPath = FileUtils.getDirectoryPath(String.format("%s.ticket.attachment", ticket.getCustomerName()));
+        String directory = String.format("%s.ticket.attachment.%s", ticket.getCustomerName(), ticket.getSubject());
         for (Attachment attachment : ticket.getAttachments()) {
-            FileUtils.createFile(uploadPath, attachment.getName(), attachment.getContents());
+            FileUtils.createFile(directory, attachment.getName(), attachment.getContents());
         }
     }
-
-
 }
