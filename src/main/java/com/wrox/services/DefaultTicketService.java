@@ -4,8 +4,6 @@ import com.wrox.entities.Attachment;
 import com.wrox.entities.Ticket;
 import com.wrox.repositories.TicketRepository;
 import com.wrox.utils.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -15,7 +13,6 @@ import java.util.List;
 
 @Service
 public class DefaultTicketService implements TicketService {
-    private static final Logger log = LogManager.getLogger();
 
     @Inject
     private TicketRepository ticketRepository;
