@@ -108,10 +108,6 @@ public class TicketController {
             if (StringUtils.isNotEmpty(attachment.getName()) || ArrayUtils.isNotEmpty(attachment.getContents())) {
                 ticket.addAttachment(attachment);
             }
-            /*if ((attachment.getName() != null && attachment.getName().length() > 0) ||
-                    (attachment.getContents() != null && attachment.getContents().length > 0)) {
-                ticket.addAttachment(attachment);
-            }*/
         }
         this.ticketService.save(ticket);
 

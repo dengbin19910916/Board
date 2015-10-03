@@ -1,13 +1,22 @@
 package com.wrox;
 
-import com.wrox.utils.FileUtils;
+import com.wrox.utils.ExcelUtils;
+import com.wrox.utils.SystemUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import static com.wrox.utils.ExcelUtils.ExcelVersion.HIGH;
+import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
 
 /**
  * Created by dengb on 2015/9/10.
  */
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 //        UUID uuid = UUID.randomUUID();
 //        System.out.println(uuid);
 
@@ -97,7 +106,41 @@ public class Test {
 
 //        System.out.println(SystemUtils.getOSType());
 
-        System.out.println(FileUtils.getDirectory("scott/ticket\\attachment.a.txt"));
-        System.out.println(FileUtils.getFilename("scott/ticket\\attachment.a.txt"));
+//        System.out.println(FileUtils.getDirectory("scott/ticket\\attachment.a.txt"));
+//        System.out.println(FileUtils.getFilename("scott/ticket\\attachment.a.txt"));
+
+//        System.out.println(Boolean.class);
+
+        /*String path ="C:\\WorkSpace\\test2.xlsx";
+        File file = new File(path);
+//        InputStream is = new FileInputStream(file);
+//        System.out.println(isExcel2003(is));
+//        System.out.println(isExcel2007(is));
+
+        System.out.println(isExcel2003(new FileInputStream(file)));
+        System.out.println(isExcel2007(new FileInputStream(file)));*/
+
+//        System.out.println(FileUtils.getFilename("b\\a.txt"));
+        System.out.println(SystemUtils.getPathRegex());
+    }
+
+    public static ExcelUtils.ExcelVersion isExcel2003(InputStream is) {
+        try {
+            new HSSFWorkbook(is);
+        } catch (Exception e) {
+            return ExcelUtils.ExcelVersion.HIGH;
+        }
+        return ExcelUtils.ExcelVersion.LOW;
+    }
+
+
+
+    public static ExcelUtils.ExcelVersion isExcel2007(InputStream is) {
+        try {
+            new XSSFWorkbook( is);
+        } catch (Exception e) {
+            return HIGH;
+        }
+        return LOW;
     }
 }

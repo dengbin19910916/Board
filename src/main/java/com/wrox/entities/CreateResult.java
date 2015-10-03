@@ -6,18 +6,18 @@ package com.wrox.entities;
 public class CreateResult {
 
     private final ChatSession chatSession;
-    private final ChatMessage chatMessage;
+    private final ChatMessage createMessage;
 
-    public CreateResult(ChatSession chatSession, ChatMessage chatMessage) {
+    public CreateResult(ChatSession chatSession, ChatMessage createMessage) {
         this.chatSession = chatSession;
-        this.chatMessage = chatMessage;
+        this.createMessage = createMessage;
     }
 
     public ChatSession getChatSession() {
         return chatSession;
     }
 
-    public ChatMessage getChatMessage() {
-        return chatMessage;
+    public ChatMessage getCreateMessage() {
+        return createMessage;
     }
 }

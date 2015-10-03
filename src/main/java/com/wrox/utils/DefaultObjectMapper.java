@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by dengb on 2015/9/11.
  */
-@Component
+@Component("objectMapper")
 public class DefaultObjectMapper extends ObjectMapper {
     private static final long serialVersionUID = -3531750769248070874L;
 

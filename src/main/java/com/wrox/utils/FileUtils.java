@@ -3,16 +3,16 @@ package com.wrox.utils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.regex.Matcher;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -24,19 +24,47 @@ public final class FileUtils {
 
     private static final Logger log = LogManager.getLogger();
 
+    /**
+     * 标识Windows系统和Linux系统中的绝对路径。
+     */
     public enum PathType {
-        WINDOWS("[a-zA-Z]:(((\\\\)|/)\\w+)(\\2\\w+)*(\\.\\w+)?"),
-        LINUX("/(\\w+/)*\\w+(\\.\\w+)");
+        /**
+         * 相对路径。
+         */
+        RELATIVE,
+        /**
+         * 绝对路径。
+         */
+        ABSOLUTE;
 
-        private String regex;
-
-        PathType(String regex) {
-            this.regex = regex;
+        /**
+         * 返回路径类型。
+         *
+         *
+         * @return 路径类型
+         */
+        public static PathType getPathType(String path) {
+            return isRelative(path) ? RELATIVE : ABSOLUTE;
         }
 
-        @Override
-        public String toString() {
-            return this.regex;
+        /**
+         * 判断路径是否为绝对路径。
+         *
+         * @param path 系统路径
+         * @return true - 是绝对路径，false - 是相对路径。
+         */
+        public static boolean isAbsolute(String path) {
+            return Pattern.compile(SystemUtils.getPathRegex()).matcher(path).matches();
+        }
+
+        /**
+         * 判断路径是否为相对路径。
+         *
+         * @param path 系统路径
+         * @return true - 是相对路径，false - 是绝对路径。
+         */
+        public static boolean isRelative(String path) {
+            return !isAbsolute(path);
         }
     }
 
@@ -50,10 +78,6 @@ public final class FileUtils {
         String directory;
         int fileNameIndex;
 
-        String regex = PathType.valueOf(SystemUtils.getOSType().toString()).toString();
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(path);
-
         path = path.replaceAll("[<> ]", "");
         if (SystemUtils.getOSType() == SystemUtils.OSType.WINDOWS) {
             int fileTypeIndex = path.lastIndexOf(".");
@@ -64,7 +88,7 @@ public final class FileUtils {
             fileNameIndex = directory.lastIndexOf("/");
         }
 
-        if (!matcher.matches()) {    // filepath是相对路径
+        if (PathType.getPathType(path) == PathType.RELATIVE) {    // filepath是相对路径
             return getBasePath() + directory.substring(0, fileNameIndex);
         }
         return directory.substring(0, fileNameIndex);
@@ -120,7 +144,6 @@ public final class FileUtils {
         if (Files.exists(filepath)) {
             try {
                 Files.delete(filepath);
-                System.out.println(filepath);
                 log.info("删除同名文件[{}]。", filepath.getFileName());
             } catch (IOException e) {
                 log.warn("删除文件失败！", e);
@@ -227,5 +250,24 @@ public final class FileUtils {
      */
     private static String getBasePathByConfigurationFile() {
         return "";
+    }
+
+    /**
+     * 读取Excel中的内容。
+     *
+     * @return
+     */
+    public static List<?> readExcel(String filepath) throws FileNotFoundException {
+        return readExcel(Paths.get(filepath));
+    }
+
+    public static List<?> readExcel(Path filepath) throws FileNotFoundException {
+        return readExcel(filepath.toFile());
+    }
+
+    public static List<?> readExcel(File excelFile) throws FileNotFoundException {
+        InputStream inputStream = new FileInputStream(excelFile);
+        Workbook workbook = new HSSFWorkbook();
+        return null;
     }
 }

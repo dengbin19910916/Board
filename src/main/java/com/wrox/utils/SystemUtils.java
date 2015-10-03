@@ -1,5 +1,7 @@
 package com.wrox.utils;
 
+import java.io.File;
+
 /**
  * 系统工具箱
  *
@@ -11,27 +13,42 @@ public final class SystemUtils {
      * 操作系统类型
      */
     public enum OSType {
-        WINDOWS("\\"),
-        LINUX("/"),
-        UNIX("/"),
-        MAC("/");
+        WINDOWS(File.separator, "[a-zA-Z]:(((\\\\)|/)\\w+)(\\2\\w+)*(\\.\\w+)?"),
+        LINUX(File.separator, "/(\\w+/)*\\w+(\\.\\w+)"),
+        UNIX(File.separator, "/(\\w+/)*\\w+(\\.\\w+)"),
+        MAC(File.separator, "/(\\w+/)*\\w+(\\.\\w+)");
 
         /**
-         * 系统路径分隔符
+         * 系统路径的分隔符
          */
         private String separator;
 
-        OSType(String separator) {
+        /**
+         * 系统路径的正则表达式
+         */
+        private String pathRegex;
+
+        OSType(String separator, String pathRegex) {
             this.separator = separator;
+            this.pathRegex = pathRegex;
         }
 
         /**
-         * 返回系统路径分隔符。
+         * 返回操作系统对应的路径分隔符。
          *
-         * @return 系统路径分隔符
+         * @return 与操作系统相关的路径分隔符
          */
         public String getSeparator() {
             return separator;
+        }
+
+        /**
+         * 返回操作系统对应的绝对路径的正则表达式。
+         *
+         * @return 绝对路径的正则表达式
+         */
+        public String getPathRegex() {
+            return pathRegex;
         }
     }
 
@@ -43,5 +60,23 @@ public final class SystemUtils {
     public static OSType getOSType() {
         String osName = System.getProperty("os.name").split("[ ]+")[0].toUpperCase();
          return OSType.valueOf(osName);
+    }
+
+    /**
+     * 返回操作系统对应的绝对路径的正则表达式。
+     *
+     * @return 绝对路径的正则表达式
+     */
+    public static String getPathRegex() {
+        return SystemUtils.getOSType().pathRegex;
+    }
+
+    /**
+     * 返回操作系统对应的路径分隔符。
+     *
+     * @return 与操作系统相关的路径分隔符
+     */
+    public static String getSeparator() {
+        return SystemUtils.getOSType().separator;
     }
 }

@@ -4,8 +4,12 @@ import com.wrox.controllers.Theme;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.websocket.server.PathParam;
+import java.util.List;
 
 /**
  * Created by Dengbin on 2015/9/24.
@@ -26,5 +30,21 @@ public class ClerkController {
     @RequestMapping("/indicator")
     public String indicator() {
         return "/performance/indicator";
+    }
+
+    @RequestMapping(value = "upload", method = RequestMethod.GET)
+    public String upload() {
+        return "performance/upload";
+    }
+
+    @RequestMapping(value = "upload", method = RequestMethod.POST)
+    public String upload(@RequestParam List<MultipartFile> files, Model model) {
+        model.addAttribute("files", files);
+        System.out.println("文件已被提交");
+        for (MultipartFile file : files) {
+            System.out.print(file.getOriginalFilename() + "   ");
+        }
+
+        return "performance/upload";
     }
 }

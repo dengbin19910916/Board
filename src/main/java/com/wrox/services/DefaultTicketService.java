@@ -31,9 +31,10 @@ public class DefaultTicketService implements TicketService {
         if (ticket.getId() < 1) {
             ticket.setDateCreated(Instant.now());
             this.ticketRepository.add(ticket);
-            this.saveAttachmentOnDisc(ticket);
-        } else
+        } else {
             this.ticketRepository.update(ticket);
+        }
+        this.saveAttachmentOnDisc(ticket);
     }
 
     /**
