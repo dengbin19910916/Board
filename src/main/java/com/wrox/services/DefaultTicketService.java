@@ -7,6 +7,7 @@ import com.wrox.utils.FileUtils;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+import java.io.InputStream;
 import java.time.Instant;
 import java.util.List;
 
@@ -35,6 +36,8 @@ public class DefaultTicketService implements TicketService {
             this.ticketRepository.update(ticket);
         }
         this.saveAttachmentOnDisc(ticket);
+        // Excel文件转换成对象
+
     }
 
     /**
@@ -47,5 +50,14 @@ public class DefaultTicketService implements TicketService {
         for (Attachment attachment : ticket.getAttachments()) {
             FileUtils.createFile(directory, attachment.getName(), attachment.getContents());
         }
+    }
+
+    /**
+     *
+     * @param filename 文件名称
+     * @param inputStream 文件输入流
+     */
+    private void parseExcel(String filename, InputStream inputStream) {
+
     }
 }

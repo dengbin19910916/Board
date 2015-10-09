@@ -255,16 +255,29 @@ public final class FileUtils {
     /**
      * 读取Excel中的内容。
      *
-     * @return
+     * @param filepath Excel文件路径
+     * @return Excel文件中的内容集合
      */
     public static List<?> readExcel(String filepath) throws FileNotFoundException {
         return readExcel(Paths.get(filepath));
     }
 
+    /**
+     * 读取Excel中的内容。
+     *
+     * @param filepath Excel文件路径对象
+     * @return Excel文件中的内容集合
+     */
     public static List<?> readExcel(Path filepath) throws FileNotFoundException {
         return readExcel(filepath.toFile());
     }
 
+    /**
+     * 读取Excel中的内容。
+     *
+     * @param excelFile Excel文件对象
+     * @return Excel文件中的内容集合
+     */
     public static List<?> readExcel(File excelFile) throws FileNotFoundException {
         InputStream inputStream = new FileInputStream(excelFile);
         Workbook workbook = new HSSFWorkbook();

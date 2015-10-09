@@ -89,7 +89,7 @@ public class TicketController {
      * @return 某一个票据明细的视图名
      */
     @RequestMapping(value = "create", method = RequestMethod.POST)
-    public String create(Principal principal, Form form) {
+    public String create(Principal principal, Form form) throws IOException {
         Ticket ticket = new Ticket();
         ticket.setCustomerName(principal.getName());
         ticket.setSubject(form.getSubject());

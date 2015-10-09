@@ -1,0 +1,1 @@
+<c:redirect url="/session/list"/>

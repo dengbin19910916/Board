@@ -7,7 +7,9 @@ import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.poifs.filesystem.OfficeXmlFileException;
+import org.apache.poi.ss.SpreadsheetVersion;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
@@ -22,6 +24,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Iterator;
+
+import static com.wrox.utils.excel.annotation.Workbook.Type.getType;
 
 /**
  * Excel文件的工具类。
@@ -39,18 +43,41 @@ public final class ExcelUtils {
     }
 
     /**
+     * 返回Excel工作簿对象。
+     *
+     * @param inputStream Excel文件输入流
+     * @return Excel工作簿对象
+     * @throws IOException IO流不可读
+     */
+    public static Workbook getWorkbook(InputStream inputStream) throws IOException, InvalidFormatException {
+        switch (getType(inputStream)) {
+            case XLS:
+                return new HSSFWorkbook(inputStream);
+            case XLSX:
+                System.out.println("调用开始XLSX" + inputStream);
+                System.out.println("start");
+                System.out.println("-->" + new XSSFWorkbook(inputStream));
+                System.out.println("end");
+                return new XSSFWorkbook(inputStream);
+            default:
+                System.out.println("调用default");
+                return new XSSFWorkbook(inputStream);
+        }
+    }
+
+    /**
      * 将Java集合中的数据以Excel的形式输出到制定的IO设备中。
      *
      * @param title 表格标题
      * @param headers 表格属性列名数组
-     * @param datas 需要显示的数据集合,集合中一定要放置符合javabean风格的类的对象。
-     *              此方法支持的javabean属性的数据类型有基本数据类型及String,Date,byte[](图片数据)
+     * @param data 需要显示的数据集合,集合中一定要放置符合javabean风格的类的对象。
+     *             此方法支持的javabean属性的数据类型有基本数据类型及String,Date,byte[](图片数据)
      * @param output 与输出设备关联的流对象，可以将EXCEL文档导出到本地文件或者网络中
      * @param pattern 如果有时间数据，设定输出格式。默认为"yyy-MM-dd"
      */
-    public static void writeExcel(String title, String[] headers, Collection<T> datas,
+    public static void writeExcel(String title, String[] headers, Collection<T> data,
                                   OutputStream output, String pattern) {
-        writeExcel(title, headers, datas, output, pattern, ExcelVersion.LOW);
+        writeExcel(title, headers, data, output, pattern, ExcelVersion.LOW);
 
     }
 
@@ -59,13 +86,13 @@ public final class ExcelUtils {
      *
      * @param title 表格标题，默认为sheet1
      * @param headers 表格属性列名数组
-     * @param datas 需要显示的数据集合,集合中一定要放置符合javabean风格的类的对象。
+     * @param data 需要显示的数据集合,集合中一定要放置符合javabean风格的类的对象。
      *              此方法支持的javabean属性的数据类型有基本数据类型及String,Date,byte[](图片数据)
      * @param output 与输出设备关联的流对象，可以将EXCEL文档导出到本地文件或者网络中
      * @param pattern 如果有时间数据，设定输出格式。默认为"yyy-MM-dd"
      * @param excelVersion Excel的版本，默认为2003版
      */
-    public static void writeExcel(String title, String[] headers, Collection<T> datas,
+    public static void writeExcel(String title, String[] headers, Collection<T> data,
                                   OutputStream output, String pattern, ExcelVersion excelVersion) {
         // 声明一个Excel工作簿
         Workbook workbook = excelVersion == ExcelVersion.HIGH ? new XSSFWorkbook() : new HSSFWorkbook();
@@ -126,7 +153,7 @@ public final class ExcelUtils {
         }
 
         // 便利集合数据，产生数据行
-        Iterator<T> iterator = datas.iterator();
+        Iterator<T> iterator = data.iterator();
         int index = 0;
         while (iterator.hasNext()) {
             row = sheet.createRow(index++);
@@ -175,6 +202,7 @@ public final class ExcelUtils {
      * @throws FileNotFoundException
      */
     public static ExcelVersion getExcelVersion(Path filepath) throws FileNotFoundException {
+        SpreadsheetVersion version = null;
         return getExcelVersion(filepath.toFile());
     }
 

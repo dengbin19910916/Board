@@ -1,12 +1,13 @@
 package com.wrox;
 
 import com.wrox.utils.ExcelUtils;
-import com.wrox.utils.SystemUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 
 import static com.wrox.utils.ExcelUtils.ExcelVersion.HIGH;
 import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
@@ -16,7 +17,7 @@ import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
  */
 public class Test {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
 //        UUID uuid = UUID.randomUUID();
 //        System.out.println(uuid);
 
@@ -121,7 +122,69 @@ public class Test {
         System.out.println(isExcel2007(new FileInputStream(file)));*/
 
 //        System.out.println(FileUtils.getFilename("b\\a.txt"));
-        System.out.println(SystemUtils.getPathRegex());
+//        System.out.println(SystemUtils.getPathRegex());
+
+//        System.out.println(LocalDate.now());
+
+//        Workbook.ExcelVersion
+
+        /*String excelPath = "C:\\WorkSpace\\test2.xlsx";
+        InputStream inputStream = new FileInputStream(excelPath);
+        *//*try {
+            new XSSFWorkbook(inputStream);
+        } catch (Exception e) {
+            System.out.println("into exception");
+            new HSSFWorkbook(inputStream);
+        }*//*
+
+//        Workbook workbook = WorkbookFactory.create(inputStream);
+        Workbook workbook = ExcelUtils.getWorkbook(inputStream);
+        System.out.println(workbook);*/
+
+//        System.out.println(LocalDate.parse("2015-01-12"));
+
+//        Instant instant = Instant.ofEpochSecond(new Date().getTime() / 1000, new Date().getTime() % 1000);
+//        System.out.println(instant);
+
+//        System.out.println(LocalDateTime.ofEpochSecond(new Date().getTime() / 1000, (int) (new Date().getTime() % 1000), ZoneOffset.UTC));
+
+//        DateFormat formatter = new SimpleDateFormat("yyyy-MMMM-dd");
+//        System.out.println(formatter.format(new Date()));
+//        LocalDate localDate = LocalDate.parse("2015-十月-05", DateTimeFormatter.ofPattern("yyyy-MMMM-dd"));
+//        System.out.println(localDate);
+
+//        Class cla = String.class;
+//        System.out.println(cla == String.class);
+
+        /*System.out.println(String.class.getName());
+        try {
+            String s = (String) Class.<String>forName("java.lang.String").newInstance();
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }*/
+        /*Class<Clerk> cla = Clerk.class;
+        Object obj = cla.newInstance();
+
+//        Method method = cla.getMethod("setId", String.class);
+//        method.invoke(obj, "111");
+
+        Field[] fields = cla.getDeclaredFields();
+        System.out.println(Arrays.toString(fields));
+        for (Field field : fields) {
+            field.setAccessible(true);
+            field.set(obj, "111");
+        }
+
+        *//*Method[] methods = cla.getDeclaredMethods();
+        for (Method method : methods) {
+            if (method.getName().startsWith("set")) {
+                method.invoke(obj, "111");
+            }
+        }*//*
+
+        System.out.println(obj);*/
+
+
     }
 
     public static ExcelUtils.ExcelVersion isExcel2003(InputStream is) {
