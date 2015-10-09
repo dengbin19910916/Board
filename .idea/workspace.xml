@@ -8,22 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28145a1e-d1b6-4bd3-94b5-67237b10042d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\src\main\java\com\wrox\utils\ExcelReader.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.iml" afterPath="$PROJECT_DIR$/Board.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/services/DefaultTicketService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/services/DefaultTicketService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Dengbin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Dengbin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/FileUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/controllers/TicketController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/controllers/TicketController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Board.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +45,8 @@
       <file leaf-file-name="AnnotationParser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/AnnotationParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6053812">
-              <caret line="75" column="58" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
+            <state vertical-scroll-proportion="1.0762331">
+              <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1444117978737" expanded="true" signature="2210:2408" placeholder="{...}" />
@@ -355,7 +340,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -624,8 +611,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1199,7 +1184,8 @@
       <workItem from="1444097893198" duration="10548000" />
       <workItem from="1444117598220" duration="978000" />
       <workItem from="1444136124308" duration="1011000" />
-      <workItem from="1444392852260" duration="430000" />
+      <workItem from="1444392852260" duration="627000" />
+      <workItem from="1444399201772" duration="122000" />
     </task>
     <task id="LOCAL-00001" summary="添加FileUtil&#10;">
       <created>1443362611176</created>
@@ -1229,7 +1215,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280061000" />
+    <option name="totallyTimeSpent" value="280380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1346,6 +1332,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1494,10 +1481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33278146">
           <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-          <folding>
-            <element signature="e#177013#177014#0" expanded="false" />
-            <element signature="e#177054#177055#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,10 +1565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33278146">
           <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
-          <folding>
-            <element signature="e#6809#6810#0" expanded="false" />
-            <element signature="e#6836#6837#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1670,8 +1649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/AnnotationParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6053812">
-          <caret line="75" column="58" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
+        <state vertical-scroll-proportion="1.0762331">
+          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1444117978737" expanded="true" signature="2210:2408" placeholder="{...}" />
