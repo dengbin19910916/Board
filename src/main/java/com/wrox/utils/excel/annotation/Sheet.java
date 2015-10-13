@@ -20,7 +20,7 @@ public @interface Sheet {
     /**
      * Excel文件的表单名称。
      */
-    String name() default "Sheet1";
+    String value() default "Sheet1";
 
     /**
      * 需要进行转换的对象类型。

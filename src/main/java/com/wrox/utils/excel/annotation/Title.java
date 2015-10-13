@@ -1,5 +1,7 @@
 package com.wrox.utils.excel.annotation;
 
+import org.apache.poi.ss.usermodel.Cell;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -20,5 +22,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public @interface Title {
     String value() default "";
 
-    Class type() default String.class;
+    int type() default Cell.CELL_TYPE_STRING;
+
+    String dateFormat() default "yyyy-MM-dd";
 }

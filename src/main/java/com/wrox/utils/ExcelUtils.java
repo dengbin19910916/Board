@@ -25,7 +25,6 @@ import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Iterator;
 
-import static com.wrox.utils.excel.annotation.Workbook.Type.getType;
 
 /**
  * Excel文件的工具类。
@@ -50,19 +49,7 @@ public final class ExcelUtils {
      * @throws IOException IO流不可读
      */
     public static Workbook getWorkbook(InputStream inputStream) throws IOException, InvalidFormatException {
-        switch (getType(inputStream)) {
-            case XLS:
-                return new HSSFWorkbook(inputStream);
-            case XLSX:
-                System.out.println("调用开始XLSX" + inputStream);
-                System.out.println("start");
-                System.out.println("-->" + new XSSFWorkbook(inputStream));
-                System.out.println("end");
-                return new XSSFWorkbook(inputStream);
-            default:
-                System.out.println("调用default");
-                return new XSSFWorkbook(inputStream);
-        }
+        return null;
     }
 
     /**

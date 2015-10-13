@@ -1,10 +1,12 @@
 package com.wrox;
 
 import com.wrox.utils.ExcelUtils;
+import com.wrox.utils.excel.Excels;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -17,7 +19,81 @@ import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
  */
 public class Test {
 
+    private static String path = "C:\\WorkSpace\\行员管理.xlsx";
+
     public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
+//        System.out.println(NumberUtils.isDigits("1231"));
+
+        InputStream inputStream = new FileInputStream(path);
+        Excels.read(inputStream);
+//        System.out.println(inputStream.);
+
+        /*LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(localDateTime);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        System.out.println(dateFormat.format(localDateTime));
+        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));*/
+
+//        InputStream inputStream = new PushbackInputStream(new FileInputStream(path));
+
+
+        /*Map<String, Map<String, Collection<Map<String, Object>>>> wb = new LinkedHashMap<>();
+        Map<String, Object> clerk1 = new LinkedHashMap<>();
+        clerk1.put("id", "730001");
+        clerk1.put("name", "张三");
+        clerk1.put("birthday", LocalDate.parse("1991-09-16"));
+        Map<String, Object> clerk2 = new LinkedHashMap<>();
+        clerk2.put("id", "730002");
+        clerk2.put("name", "李四");
+        clerk2.put("birthday", LocalDate.parse("1990-11-30"));
+        Collection<Map<String, Object>> list = new ArrayList<>();
+        list.add(clerk1);
+        list.add(clerk2);
+
+        Map<String, Collection<Map<String, Object>>> sheet = new LinkedHashMap<>();
+        sheet.put("城西支行", list);
+
+        Map<String, Object> clerk3 = new LinkedHashMap<>();
+        clerk3.put("id", "730003");
+        clerk3.put("name", "王二");
+        clerk3.put("birthday", LocalDate.parse("2000-05-11"));
+        Map<String, Object> clerk4 = new LinkedHashMap<>();
+        clerk4.put("id", "730003");
+        clerk4.put("name", "麻子");
+        clerk4.put("birthday", LocalDate.parse("2010-01-22"));
+        Collection<Map<String, Object>> list2 = new ArrayList<>();
+        list2.add(clerk3);
+        list2.add(clerk4);
+        sheet.put("城东支行", list2);
+
+        wb.put("行员管理", sheet);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(wb);
+//        System.out.println(json);
+
+        LocalDate localDate = LocalDate.now();
+        String dateJson = gson.toJson(localDate);
+//        System.out.println(dateJson);
+        LocalDate localDate1 = gson.fromJson(dateJson, new TypeToken<LocalDate>() {}.getType());
+//        System.out.println(localDate1);
+
+        Map<String, Map<String, Collection<Clerk>>> maps =  gson.fromJson(json, new TypeToken<Map<String, Map<String, Collection<Clerk>>>>() {}.getType());
+        System.out.println(maps);
+
+        Map<String, Map<String, Collection<Map<String, Object>>>> workbook = gson.fromJson(json, new TypeToken<Map<String, Map<String, Collection<Map<String, Object>>>>>() {}.getType());
+        Collection<Map<String, Object>> collection = workbook.get("行员管理").get("城西支行");
+        Iterator<Map<String, Object>> iterator = collection.iterator();
+        Map<String, Object> map = iterator.<Map<String, Object>>next();*/
+//        System.out.println(((Map) map.get("出生日期")).get("year"));
+
+
+//        Workbook.Type type = Workbook.Type.getType(inputStream);
+//        System.out.println(type);
+
+//        org.apache.poi.ss.usermodel.Workbook workbook = WorkbookFactory.create(inputStream);
+//        System.out.println(workbook);
+
 //        UUID uuid = UUID.randomUUID();
 //        System.out.println(uuid);
 
