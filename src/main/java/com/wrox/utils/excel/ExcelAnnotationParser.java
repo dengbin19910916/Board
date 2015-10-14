@@ -8,10 +8,8 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.lang.reflect.Type;
+import java.util.*;
 
 /**
  * Created by Dengbin on 2015/10/4.
@@ -21,6 +19,19 @@ public class ExcelAnnotationParser {
 
     public ExcelAnnotationParser() {
         super();
+    }
+
+    public Map<String, Type> getTypeDirectory(Class clazz) {
+        Field[] fields = clazz.getDeclaredFields();
+        Map<String, Type> directory = new HashMap<>();
+        for (Field field : fields) {
+            Title title = field.getAnnotation(Title.class);
+            if (Objects.nonNull(title)) {
+                directory.put(title.value(), field.getGenericType());
+            }
+
+        }
+        return directory;
     }
 
     /**

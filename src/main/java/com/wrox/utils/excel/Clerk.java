@@ -23,38 +23,32 @@ import java.time.LocalDate;
 public class Clerk {
 
     @Title("行员代号")
-    private String id;
+    private String clerkId;
     @Title("行员名称")
     private String name;
-    @Title(value = "出生日期")
+    @Title("身份证")
+    private String id;
+    @Title(value = "出生日期", exportable = false)
     private LocalDate birthday;
-    @Title(value = "业务量")
+    @Title(value = "业务量", importable = false)
     private int portfolio;
-    @Title(value = "绩效")
+    @Title(value = "绩效", importable = false)
     private int performance;
-    @Title(value = "发放日期")
+    @Title(value = "发放日期", importable = false, exportable = false)
     private LocalDate issueDate;
     @Title(value = "备注")
     private String comment;
-
-
 
     public Clerk() {
         super();
     }
 
-    public Clerk(String id, String name, LocalDate birthday) {
-        this.id = id;
-        this.name = name;
-        this.birthday = birthday;
+    public String getClerkId() {
+        return clerkId;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public void setClerkId(String clerkId) {
+        this.clerkId = clerkId;
     }
 
     public String getName() {
@@ -65,13 +59,52 @@ public class Clerk {
         this.name = name;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public LocalDate getBirthday() {
         return birthday;
     }
 
-
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
+    }
+
+    public int getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(int portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public int getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(int performance) {
+        this.performance = performance;
+    }
+
+    public LocalDate getIssueDate() {
+        return issueDate;
+    }
+
+    public void setIssueDate(LocalDate issueDate) {
+        this.issueDate = issueDate;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     @Override

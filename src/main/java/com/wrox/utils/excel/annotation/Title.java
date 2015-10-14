@@ -25,4 +25,14 @@ public @interface Title {
     int type() default Cell.CELL_TYPE_STRING;
 
     String dateFormat() default "yyyy-MM-dd";
+
+    /**
+     * 是否将Excel文件数据转换成对象数据。
+     */
+    boolean importable() default true;
+
+    /**
+     * 是否将对象数据转换成Excel文件数据。
+     */
+    boolean exportable() default true;
 }

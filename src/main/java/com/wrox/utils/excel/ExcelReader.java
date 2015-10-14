@@ -2,7 +2,8 @@ package com.wrox.utils.excel;
 
 import org.apache.poi.ss.usermodel.*;
 
-import java.lang.reflect.Type;
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
 import java.util.*;
 
 /**
@@ -117,7 +118,7 @@ public class ExcelReader {
 
         /*for (int i = 1; i <= last; i++) {
             Row row = sheet.getRow(i);
-            if (!isNullRow(row)) {
+            if (!isValid(row)) {
                 row.getCell(0).setCellType(Cell.CELL_TYPE_STRING);
                 System.out.println(String.valueOf(row.getCell(row.getFirstCellNum()).getStringCellValue()));
             }
@@ -143,6 +144,16 @@ public class ExcelReader {
         return readSheetContent(name, clazz, null);
     }
 
+    /**
+     * 返回表单中的所有内容。默认表头为第一行。<br/>
+     * 内容格式为：<br/>
+     * 表头名:内容
+     *
+     * @param name Excel工作簿中的表单的名称
+     * @param clazz Excel解析对应的目标类型
+     * @param errors 返回错误信息
+     * @return 表单中所有内容，不包含表头。
+     */
     @SuppressWarnings("unchecked")
     public Map<String, Object>[] readSheetContent(String name, Class clazz, Map<Integer, String> errors) {
         /*
@@ -156,11 +167,16 @@ public class ExcelReader {
 
         for (int i = 1; i <= sheet.getLastRowNum(); i++) {
             Row row = sheet.getRow(i);
-            Map<String, Object> content = new HashMap<>(headers.length);
-            for (int j = 0; j < headers.length; j++) {
-                content.put(headers[j], getCellValue(row.getCell(j), null));
+            if (isValid(row)) {
+                Map<String, Object> content = new HashMap<>(headers.length);
+                for (int j = 0; j < headers.length; j++) {
+                    Object val = getCellValue(row.getCell(j), errors);
+                    if (Objects.nonNull(val)) {
+                        content.put(headers[j], getCellValue(row.getCell(j), errors));
+                    }
+                }
+                contents.add(content);
             }
-            contents.add(content);
         }
 
         // safe type
@@ -168,12 +184,61 @@ public class ExcelReader {
     }
 
     /**
+     * 将Excel数据匹配到Java对象中。
+     *
+     * @param clazz Java对象类型
+     * @param contents 需要进行匹配的数据
+     * @param dictionary 进行匹配时的字段对照字典
+     * @param <T> Java对象类型，用来强制转换数组类型
+     * @return Java对象数组
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     */
+    @SuppressWarnings("unchecked")
+    public <T> T[] mapper(Class<T> clazz, Map<String, Object>[] contents, Map<String, String> dictionary) throws IllegalAccessException, InstantiationException {
+        Map<String, Field> fields = new HashMap<>();
+        for (Field field : clazz.getDeclaredFields()) {
+            fields.put(field.getName(), field);
+        }
+        List<T> list = new ArrayList<>();
+        for (Map<String, Object> content : contents) {
+            T obj = clazz.newInstance();
+            mapper(obj, fields, content, dictionary);
+            list.add(obj);
+        }
+        // type safe
+        T[] ts = (T[]) Array.newInstance(clazz, list.size());
+        for (int i = 0; i < ts.length; i++) {
+            ts[i] = list.get(i);
+        }
+        return ts;
+    }
+
+    /**
+     * 将Excel数据匹配到Java对象中。
+     *
+     * @param obj 需要被赋值的对象
+     * @param fields 需要被赋值的字段
+     * @param content 为字段提供值的MAP集合
+     * @param dictionary 字段名与Excel列名的对照表
+     * @param <T> 需要被赋值的对象的类型
+     * @throws IllegalAccessException
+     */
+    private <T> void mapper(T obj, Map<String, Field> fields, Map<String, Object> content, Map<String, String> dictionary) throws IllegalAccessException {
+        for (Map.Entry<String, Field> fieldEntry : fields.entrySet()) {
+            fieldEntry.getValue().setAccessible(true);
+            fieldEntry.getValue().set(obj, content.get(dictionary.get(fieldEntry.getKey())));
+        }
+    }
+
+    /**
      * 返回单元格的内容。
      *
      * @param cell 单元格
+     * @param errors 错误信息
      * @return 单元格的内容
      */
-    private Object getCellValue(Cell cell, Type type) {
+    private Object getCellValue(Cell cell, Map<Integer, String> errors) {
         if (Objects.isNull(cell)) {
             return null;
         }
@@ -190,7 +255,6 @@ public class ExcelReader {
             case Cell.CELL_TYPE_BOOLEAN:
                 return cell.getBooleanCellValue();
             case Cell.CELL_TYPE_FORMULA:
-                System.out.println("公式进入");
                 return getFormulaCellValue(cell);
             default:
                 return null;
@@ -206,7 +270,7 @@ public class ExcelReader {
                 if (DateUtil.isCellDateFormatted(cell)) {
                     return cell.getDateCellValue();
                 } else {
-                    return cell.getNumericCellValue();
+                    return cellValue.getNumberValue();
                 }
             case Cell.CELL_TYPE_BOOLEAN:
                 return cell.getBooleanCellValue();
@@ -215,12 +279,28 @@ public class ExcelReader {
         }
     }
 
-    private boolean isNullRow(Row row) {
+    /**
+     * 验证Excel文件的数据行是否有效，数据默认从第一列开始。
+     *
+     * @param row Excel文件的数据行
+     * @return 数据行的有效性。true - 有效， false - 无效。
+     */
+    private boolean isValid(Row row) {
+        return isValid(row, (short) 0);
+    }
+
+    /**
+     * 验证Excel文件的数据行是否有效。
+     *
+     * @param row Excel文件的数据行
+     * @param dataIndex 数据的开始列的索引
+     * @return 数据行的有效性。true - 有效， false - 无效。
+     */
+    private boolean isValid(Row row, short dataIndex) {
         try {
-            row.getFirstCellNum();
-            return false;
+            return row.getFirstCellNum() == dataIndex;
         } catch (NullPointerException e) {
-            return true;
+            return false;
         }
     }
 

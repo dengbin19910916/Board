@@ -6,6 +6,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -26,6 +27,9 @@ public final class Excels {
 //        Map<String, Object>[] map = reader.readSheetContent("城东支行", Clerk.class);
         Map<String, Object>[] map = reader.readSheetContent("城西支行", Clerk.class);
         System.out.println(Arrays.toString(map));
+        ExcelAnnotationParser parser = new ExcelAnnotationParser();
+        Map<String, Type> directory = parser.getTypeDirectory(Clerk.class);
+        System.out.println(directory);
 
         return null;
     }
