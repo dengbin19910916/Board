@@ -8,42 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28145a1e-d1b6-4bd3-94b5-67237b10042d" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\.idea\libraries\Maven__com_google_guava_guava_16_0_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/ChatEndpoint.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/ChatEndpoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/ChatEndpoint.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/ChatEndpoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultDiscussionService.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultDiscussionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultDiscussionService.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultDiscussionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultSessionRegistry.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultSessionRegistry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultTicketService.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultTicketService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelAnnotationParser.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelAnnotationParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelReaderUtil.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelReaderUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelUtils$ExcelVersion.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelUtils$ExcelVersion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelUtils.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/repositories/InMemoryReplyRepository.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/repositories/InMemoryReplyRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Sheet.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Sheet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/controllers/TicketController$Form.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/controllers/TicketController$Form.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/controllers/TicketController.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/controllers/TicketController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Title.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Title.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Workbook.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/annotation/Workbook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.iml" afterPath="$PROJECT_DIR$/Board.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/Title.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/Title.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0_rc2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Board.iws" />
@@ -1207,7 +1172,7 @@
       <workItem from="1445009583767" duration="9356000" />
       <workItem from="1445045933959" duration="2991000" />
       <workItem from="1445050315042" duration="1305000" />
-      <workItem from="1445053813829" duration="13311000" />
+      <workItem from="1445053813829" duration="13962000" />
     </task>
     <task id="LOCAL-00001" summary="添加FileUtil&#10;">
       <created>1443362611176</created>
@@ -1233,15 +1198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1443845978324</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改ExcelReader对Excel文件数据读取的逻辑。">
+      <created>1445078559468</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1445078559468</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387216000" />
+    <option name="totallyTimeSpent" value="387867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1252,7 +1223,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2395722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3116883" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3116883" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1289,7 +1260,8 @@
     <MESSAGE value="添加系统类型的处理" />
     <MESSAGE value="FileUtils完成对系统默认路径的文件创建处理。" />
     <MESSAGE value="修改FileUtils中的PathType，添加Excel文件处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改FileUtils中的PathType，添加Excel文件处理" />
+    <MESSAGE value="修改ExcelReader对Excel文件数据读取的逻辑。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改ExcelReader对Excel文件数据读取的逻辑。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1609,8 +1581,8 @@
         <state vertical-scroll-proportion="0.42218542">
           <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding>
-            <element signature="e#3045#3046#0" expanded="true" />
-            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="false" />
+            <element signature="e#3084#3085#0" expanded="false" />
           </folding>
         </state>
       </provider>
