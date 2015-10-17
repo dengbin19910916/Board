@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 import java.util.*;
 
 /**
@@ -21,17 +20,44 @@ public class ExcelAnnotationParser {
         super();
     }
 
-    public Map<String, Type> getTypeDirectory(Class clazz) {
+    public Map<String, Class> getTypeDirectory(Class clazz) {
         Field[] fields = clazz.getDeclaredFields();
-        Map<String, Type> directory = new HashMap<>();
+        Map<String, Class> directory = new HashMap<>();
         for (Field field : fields) {
             Title title = field.getAnnotation(Title.class);
             if (Objects.nonNull(title)) {
-                directory.put(title.value(), field.getGenericType());
+                directory.put(title.value(), getWrapType(field.getType()));
             }
-
         }
         return directory;
+    }
+
+    public static Class getWrapType(Class clz) {
+        if (clz == byte.class) {
+            return Byte.class;
+        }
+        if (clz == short.class) {
+            return Short.class;
+        }
+        if (clz == int.class) {
+            return Integer.class;
+        }
+        if (clz == long.class) {
+            return Long.class;
+        }
+        if (clz == float.class) {
+            return Float.class;
+        }
+        if (clz == double.class) {
+            return Double.class;
+        }
+        if (clz == char.class) {
+            return Character.class;
+        }
+        if (clz == boolean.class) {
+            return Boolean.class;
+        }
+        return clz;
     }
 
     /**

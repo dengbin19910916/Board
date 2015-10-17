@@ -15,6 +15,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * 使用了此注解的属性必须拥有get/set方法。<br/>
  *
  * Created by Dengbin on 2015/10/4.
+ * @author dengb
  */
 @Target({METHOD, FIELD})
 @Retention(RUNTIME)
@@ -25,7 +26,6 @@ public @interface Title {
     int type() default Cell.CELL_TYPE_STRING;
 
     String dateFormat() default "yyyy-MM-dd";
-
     /**
      * 是否将Excel文件数据转换成对象数据。
      */

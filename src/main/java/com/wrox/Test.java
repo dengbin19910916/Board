@@ -19,13 +19,45 @@ import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
  */
 public class Test {
 
-    private static String path = "C:\\WorkSpace\\行员管理.xlsx";
+    private static String path = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\行员管理.xlsx";
 
-    public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
+    public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
 //        System.out.println(NumberUtils.isDigits("1231"));
 
         InputStream inputStream = new FileInputStream(path);
         Excels.read(inputStream);
+
+//        BigInteger integer = null;
+//        System.out.println(new BigDecimal("1213.00123").precision());
+
+        /*Workbook workbook = WorkbookFactory.create(new FileInputStream(path));
+        Sheet sheet = workbook.getSheetAt(0);
+        Row row = sheet.getRow(6);
+        org.apache.poi.ss.usermodel.Cell cell = row.getCell(0);
+        double d = cell.getNumericCellValue();
+        System.out.println(d + "------" + Double.MAX_VALUE);*/
+//        System.out.println(cell.getNumericCellValue());
+
+
+//        System.out.println(Double.TYPE);
+
+//        Number number = NumberUtils.createNumber("127.11");
+//        System.out.println(number.byteValue());
+
+//        Class clazz = Integer.class;
+//        Class classes = clazz.getSuperclass();
+//        System.out.println(classes == Number.class);
+
+//        System.out.println(NumberUtils.createInteger("123"));
+//        System.out.println(NumberUtils.isDigits("123"));
+
+//        Class cla = Class.forName(Integer.class.getName());
+//        Object i = cla.cast(111);
+//        System.out.println(i);
+
+        /*double d = 10000.01;
+        int i = (int) d;
+        System.out.println(i);*/
 
 //        System.out.println(inputStream.);
 
