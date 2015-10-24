@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Error: Discussion Not Found</title>
+    <column>Error: Discussion Not Found</column>
 </head>
 <body>
 <h2>Error: Discussion Not Found</h2>

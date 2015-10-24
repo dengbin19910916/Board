@@ -15,7 +15,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({TYPE})
 @Retention(RUNTIME)
 @Documented
-public @interface Sheet {
+public @interface ExcelSheet {
 
     /**
      * Excel文件的表单名称。

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Customer Support :: <c:out value="${fn:trim(htmlTitle)}"/></title>
+    <column>Customer Support :: <c:out value="${fn:trim(htmlTitle)}"/></column>
     <%--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css"/>--%>
     <link rel="stylesheet" href="<c:url value="/resources/stylesheet/bootstrap.min.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/stylesheet/main.css" />"/>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Discussion: <c:out value="${discussion.subject}"/></title>
+    <column>Discussion: <c:out value="${discussion.subject}"/></column>
 </head>
 <body>
 <h2>讨论: <c:out value="${discussion.subject}"/></h2>

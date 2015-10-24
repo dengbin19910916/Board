@@ -1,15 +1,18 @@
 package com.wrox;
 
 import com.wrox.utils.ExcelUtils;
+import com.wrox.utils.excel.Clerk;
 import com.wrox.utils.excel.Excels;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Paths;
+import java.util.Arrays;
 
 import static com.wrox.utils.ExcelUtils.ExcelVersion.HIGH;
 import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
@@ -19,23 +22,100 @@ import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
  */
 public class Test {
 
-    private static String path = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\行员管理.xlsx";
+    private static final String clerk = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\行员管理.xlsx";
+
+    private static final String book = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\书籍管理.xlsx";
 
     public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
 //        System.out.println(NumberUtils.isDigits("1231"));
 
-        InputStream inputStream = new FileInputStream(path);
-        Excels.read(inputStream);
+//        InputStream inputStream = new FileInputStream(book);
+//        Book[] books = Excels.read(inputStream, Book.class);
+//        System.out.println(Arrays.toString(books));
+
+//        InputStream is = new FileInputStream(path);
+//        Clerk[] clerks = Excels.read(is, Clerk.class);
+//        System.out.println(Arrays.toString(clerks));
+        //////////////////////////////////////////////////////////////////////////////////////////////
+//        Clerk[] clerks = Excels.read(Clerk.class, Paths.get(clerk).toFile(), 0, 2);
+        Clerk[] clerks = Excels.read(Clerk.class, WorkbookFactory.create(Paths.get(clerk).toFile()), 1);
+//        Book[] books = Excels.read(new FileInputStream(book), Book.class);
+        final int[] i = {0};
+        Arrays.asList(clerks).stream().forEach(clerk -> System.out.println((++i[0]) + "=> " + clerk));
+
+        Excels.write(Clerk.class, clerks);
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+//        Excels.write();
+
+//        LocalDateTime localDateTime = LocalDateTime.now();
+//        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+
+//        System.out.println(LocalTime.now());
+//        final int[] j = {0};
+//        Arrays.asList(books).stream().forEach(book -> System.out.println((++j[0]) + "--> " + book));
+
+//        Double dd = 1.4102401298123E10;
+//        DecimalFormat format = new DecimalFormat("0");
+//
+//        System.out.println(format.format(dd));
+
+//        Gson gson = new GsonBuilder().registerTypeAdapter(LocalDateTime.class, new JsonDeserializer<LocalDateTime>() {
+//            @Override
+//            public LocalDateTime deserialize(JsonElement json, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+//                System.out.println(json + "....");
+//                Instant instant = Instant.ofEpochMilli(json.getAsJsonPrimitive().getAsLong());
+//                return LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+//            }
+//        }).setDateFormat("yyyy-MM-dd").create();
+        /*Gson gson = new GsonBuilder().create();
+        String json = gson.toJson(LocalDateTime.now());
+        String date = LocalDateTime.now().toString();
+        System.out.println(json + " --- " + date);
+
+        LocalDateTime time = gson.fromJson("{\"date\":{\"year\":2015,\"month\":10,\"day\":20},\"time\":{\"hour\":0,\"minute\":30,\"second\":21,\"nano\":284000000}}", new TypeToken<LocalDateTime>() {}.getType());
+        System.out.println(time);*/
+
+        /* 序列化与反序列化
+        Book book = new Book();
+        book.setIsbn("978-0321336781");
+        book.setTitle("Java Puzzlers: Traps, Pitfalls, and Corner Cases");
+        book.setAuthors(new String[] {"Joshua Bloch", "Neal Gafter"});
+        book.setDate(LocalDate.now());
+
+        Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class,
+                (JsonSerializer<LocalDate>) (localDate, type, context) -> new JsonPrimitive(localDate.format(DateTimeFormatter.ofPattern("yyyy/M/d"))))
+                .registerTypeAdapter(LocalDate.class, (JsonDeserializer<LocalDate>) (json, typeOfT, context) -> LocalDate.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("yyyy/M/d")))
+                .create();
+        String json = gson.toJson(book, Book.class);
+        System.out.println("-->" + json);
+
+        String back = "{\"authors\":[\"Joshua Bloch\",\"Neal Gafter\"],\"isbn\":\"978-0321336781\",\"title\":\"Java Puzzlers: Traps, Pitfalls, and Corner Cases\",\"date\":\"2015/10/20\"}";
+        Book book1 = gson.fromJson(back, Book.class);
+        System.out.println("-->" + book1);*/
+
+        /*Gson gson = new GsonBuilder().registerTypeAdapter(Book.class, new BookTypeAdapter()).create();
+        String json = gson.toJson(book);
+        System.out.println(json);
+
+        String ss = "{\"isbn\":\"978-0321336781\",\"title\":\"Java Puzzlers: Traps, Pitfalls, and Corner Cases\",\"authors\":\"Joshua Bloch;Neal Gafter\",\"date\":\"2015-10-20\"}";
+        Book bo = gson.fromJson(ss, Book.class);
+        System.out.println("->" + bo);
+
+        System.out.println(Instant.parse("2015-10-20T05:08:14.481Z"));*/
+
+//        System.out.println(LocalDate.parse("2015-01-09"));
 
 //        BigInteger integer = null;
 //        System.out.println(new BigDecimal("1213.00123").precision());
 
-        /*Workbook workbook = WorkbookFactory.create(new FileInputStream(path));
-        Sheet sheet = workbook.getSheetAt(0);
-        Row row = sheet.getRow(6);
-        org.apache.poi.ss.usermodel.Cell cell = row.getCell(0);
-        double d = cell.getNumericCellValue();
-        System.out.println(d + "------" + Double.MAX_VALUE);*/
+        /*ExcelWorkbook workbook = WorkbookFactory.create(new FileInputStream(path));
+        ExcelSheet sheet = workbook.getSheetAt(0);
+        Row row = sheet.getRow(2);
+        Cell cell = row.getCell(0);
+//        boolean b = cell.getBooleanCellValue();
+        System.out.println("--->" + Boolean.valueOf("TRUE"));
+        System.out.println(cell.getStringCellValue() + " -- " + cell.getCellType());*/
 //        System.out.println(cell.getNumericCellValue());
 
 
@@ -121,10 +201,10 @@ public class Test {
 //        System.out.println(((Map) map.get("出生日期")).get("year"));
 
 
-//        Workbook.Type type = Workbook.Type.getType(inputStream);
+//        ExcelWorkbook.Type type = ExcelWorkbook.Type.getType(inputStream);
 //        System.out.println(type);
 
-//        org.apache.poi.ss.usermodel.Workbook workbook = WorkbookFactory.create(inputStream);
+//        org.apache.poi.ss.usermodel.ExcelWorkbook workbook = WorkbookFactory.create(inputStream);
 //        System.out.println(workbook);
 
 //        UUID uuid = UUID.randomUUID();
@@ -235,7 +315,7 @@ public class Test {
 
 //        System.out.println(LocalDate.now());
 
-//        Workbook.ExcelVersion
+//        ExcelWorkbook.ExcelVersion
 
         /*String excelPath = "C:\\WorkSpace\\test2.xlsx";
         InputStream inputStream = new FileInputStream(excelPath);
@@ -246,8 +326,8 @@ public class Test {
             new HSSFWorkbook(inputStream);
         }*//*
 
-//        Workbook workbook = WorkbookFactory.create(inputStream);
-        Workbook workbook = ExcelUtils.getWorkbook(inputStream);
+//        ExcelWorkbook workbook = WorkbookFactory.create(inputStream);
+        ExcelWorkbook workbook = ExcelUtils.getWorkbook(inputStream);
         System.out.println(workbook);*/
 
 //        System.out.println(LocalDate.parse("2015-01-12"));

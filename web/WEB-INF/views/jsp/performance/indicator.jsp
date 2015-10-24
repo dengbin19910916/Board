@@ -77,16 +77,16 @@
                         width: 300,
                         locked: true,
                         field: "ProductName",
-                        title: "Product Name",
+                        column: "Product Name",
                         aggregates: ["count"],
                         footerTemplate: "Total Count: #=count#",
                         groupFooterTemplate: "Count: #=count#"
                     },
-                    {width: 300, field: "UnitPrice", title: "Unit Price", aggregates: ["sum"]},
+                    {width: 300, field: "UnitPrice", column: "Unit Price", aggregates: ["sum"]},
                     {
                         width: 300,
                         field: "UnitsOnOrder",
-                        title: "Units On Order",
+                        column: "Units On Order",
                         aggregates: ["average"],
                         footerTemplate: "Average: #=average#",
                         groupFooterTemplate: "Average: #=average#"
@@ -94,7 +94,7 @@
                     {
                         width: 300,
                         field: "UnitsInStock",
-                        title: "Units In Stock",
+                        column: "Units In Stock",
                         aggregates: ["min", "max", "count"],
                         footerTemplate: "Min: #= min # Max: #= max #",
                         groupHeaderTemplate: "Units In Stock: #= value # (Count: #= count#)"

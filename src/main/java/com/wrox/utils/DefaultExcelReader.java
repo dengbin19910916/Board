@@ -1,12 +1,10 @@
 package com.wrox.utils;
 
-import com.wrox.utils.excel.Clerk;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
@@ -282,11 +280,5 @@ public class DefaultExcelReader implements ExcelReader {
                 }
             default: return null;   // not happened
         }
-    }
-
-    public static void main(String[] args) throws IOException, InvalidFormatException, IllegalAccessException, InstantiationException, InvocationTargetException {
-        ExcelReader reader = new DefaultExcelReader();
-        InputStream inputStream = new FileInputStream("C:\\WorkSpace\\test2.xlsx");
-        reader.readContent(inputStream, Clerk.class);
     }
 }

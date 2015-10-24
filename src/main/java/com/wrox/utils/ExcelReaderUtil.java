@@ -219,7 +219,7 @@ public class ExcelReaderUtil {
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         String filepath = "C:\\WorkSpace\\test2.xlsx";
         try {
             // 对读取Excel表格标题测试
@@ -245,5 +245,5 @@ public class ExcelReaderUtil {
             System.out.println("未找到指定路径的文件!");
             e.printStackTrace();
         }
-    }
+    }*/
 }

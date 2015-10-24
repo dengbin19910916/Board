@@ -17,7 +17,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({TYPE})
 @Retention(RUNTIME)
 @Documented
-public @interface Workbook {
+public @interface ExcelWorkbook {
 
     /**
      * Excel文件名称，用于生成Excel文件。
@@ -29,7 +29,7 @@ public @interface Workbook {
      * 默认为表单“Sheet1”。<br/>
      * 表单中的数据与Javabean对象进行相互转换。
      */
-    Sheet[] sheets() default @Sheet;
+    ExcelSheet[] sheets() default @ExcelSheet;
 
     /**
      * Excel文件类型，默认为97-2003工作簿。

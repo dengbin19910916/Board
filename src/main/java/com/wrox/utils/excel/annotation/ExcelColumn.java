@@ -20,12 +20,16 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({METHOD, FIELD})
 @Retention(RUNTIME)
 @Documented
-public @interface Title {
+public @interface ExcelColumn {
     String value() default "";
 
     int type() default Cell.CELL_TYPE_STRING;
 
+    /**
+     * 设置日期格式，默认为yyyy-MM-dd
+     */
     String dateFormat() default "yyyy-MM-dd";
+
     /**
      * 是否将Excel文件数据转换成对象数据。
      */
