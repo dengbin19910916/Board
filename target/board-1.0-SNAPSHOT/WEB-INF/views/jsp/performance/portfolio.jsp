@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>业务量</title>
+    <column>业务量</column>
     <link rel="stylesheet" href="<c:url value="/resources/stylesheet/main.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.common.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.office365.min.css"/>">
@@ -45,17 +45,17 @@
             },
             columns: [{
                 template: "<div class='customer-photo'" +
-                "style='background-image: url(http://localhost:8080/board/resources/stylesheet/content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                "style='background-image: url(http://localhost:8080/board/resources/stylesheet/content/web/Customers/#:credit.CustomerID#.jpg);'></div>" +
                 "<div class='customer-name'>#: ContactName #</div>",
                 field: "ContactName",
-                title: "Contact Name",
+                column: "Contact Name",
                 width: 240
             }, {
                 field: "ContactTitle",
-                title: "Contact Title"
+                column: "Contact ExcelColumn"
             }, {
                 field: "CompanyName",
-                title: "Company Name"
+                column: "Company Name"
             }, {
                 field: "Country",
                 width: 150

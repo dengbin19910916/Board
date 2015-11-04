@@ -21,6 +21,7 @@ import java.util.Date;
         },
         type = ExcelType.XLSX
 )
+@ExcelSheet
 public class Clerk {
 
     @ExcelColumn("行员代号")

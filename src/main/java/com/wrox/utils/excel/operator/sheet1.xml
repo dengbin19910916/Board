@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+           xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x14ac"
+           xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac">
+    <dimension ref="A1:I2"/>
+    <sheetViews>
+        <sheetView tabSelected="1" workbookViewId="0">
+            <selection activeCell="I3" sqref="I3"/>
+        </sheetView>
+    </sheetViews>
+    <sheetFormatPr defaultRowHeight="13.8" x14ac:dyDescent="0.25"/>
+    <cols>
+        <col min="2" max="2" width="11.6640625" bestFit="1" customWidth="1"/>
+        <col min="3" max="3" width="16.109375" style="1" bestFit="1" customWidth="1"/>
+        <col min="4" max="4" width="12.21875" style="2" bestFit="1" customWidth="1"/>
+        <col min="6" max="6" width="11.21875" bestFit="1" customWidth="1"/>
+        <col min="7" max="7" width="11.6640625" style="4" bestFit="1" customWidth="1"/>
+        <col min="8" max="8" width="12.21875" bestFit="1" customWidth="1"/>
+    </cols>
+    <sheetData>
+        <row r="1" spans="1:9" x14ac:dyDescent="0.25">
+            <c r="A1" t="s">
+                <v>2</v>
+            </c>
+            <c r="B1" t="s">
+                <v>0</v>
+            </c>
+            <c r="C1" s="3" t="s">
+                <v>1</v>
+            </c>
+            <c r="D1" s="2" t="s">
+                <v>5</v>
+            </c>
+            <c r="E1" t="s">
+                <v>6</v>
+            </c>
+            <c r="F1" t="s">
+                <v>7</v>
+            </c>
+            <c r="G1" s="4" t="s">
+                <v>8</v>
+            </c>
+            <c r="H1" t="s">
+                <v>10</v>
+            </c>
+            <c r="I1" t="s">
+                <v>11</v>
+            </c>
+        </row>
+        <row r="2" spans="1:9" x14ac:dyDescent="0.25">
+            <c r="A2" t="s">
+                <v>3</v>
+            </c>
+            <c r="B2" t="s">
+                <v>4</v>
+            </c>
+            <c r="C2" s="1">
+                <v>42369</v>
+            </c>
+            <c r="D2" s="2">
+                <v>-123456.12345678901</v>
+            </c>
+            <c r="E2" t="e">
+                <f>T(#REF!)</f>
+                <v>#REF!</v>
+            </c>
+            <c r="F2" s="1">
+                <v>42306</v>
+            </c>
+            <c r="G2" s="4" t="s">
+                <v>9</v>
+            </c>
+            <c r="H2" s="2">
+                <f>D2+5</f>
+                <v>-123451.12345678901</v>
+            </c>
+            <c r="I2" t="b">
+                <v>1</v>
+            </c>
+        </row>
+    </sheetData>
+    <phoneticPr fontId="1" type="noConversion"/>
+    <pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/>
+    <pageSetup paperSize="9" orientation="portrait" r:id="rId1"/>
+</worksheet>

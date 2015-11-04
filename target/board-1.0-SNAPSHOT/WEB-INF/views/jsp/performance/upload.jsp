@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Upload Test</title>
+    <column>Upload Test</column>
     <link rel="stylesheet" href="<c:url value="/resources/stylesheet/main.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.common.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.office365.min.css"/>">

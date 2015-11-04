@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Discussion List</title>
+    <column>Discussion List</column>
 </head>
 <body>
 <h2>讨论列表</h2>

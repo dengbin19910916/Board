@@ -2,6 +2,9 @@
   <dictionary name="dengb">
     <words>
       <w>indexs</w>
+      <w>inlinestr</w>
+      <w>xerces</w>
+      <w>xssf</w>
     </words>
   </dictionary>
 </component>

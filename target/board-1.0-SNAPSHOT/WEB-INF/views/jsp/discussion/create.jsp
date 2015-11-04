@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Discussion</title>
+    <column>Create Discussion</column>
 </head>
 <body>
 <h2>创建讨论</h2>

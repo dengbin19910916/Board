@@ -20,6 +20,7 @@ import java.util.*;
  * 读取Excel文件中的内容。
  * <p>
  * Created by Dengbin on 2015/10/12.
+ * @author dengb
  */
 public class ExcelReader {
     private static final Logger log = LogManager.getLogger();
@@ -90,7 +91,7 @@ public class ExcelReader {
     /**
      * 返回Excel工作簿中的所有表格的名称数组。
      *
-     * @return Excel工作簿中的所有表格的名称数组
+     * @return Excel工作簿中的所有表格的名称数组。
      */
     public String[] readSheetNames() {
         int count = workbook.getNumberOfSheets();
@@ -106,7 +107,7 @@ public class ExcelReader {
     /**
      * 返回Excel表单的表头数组。默认取第一行数据为表头数据，表单为第一个表单。
      *
-     * @return Excel表单的表头数组
+     * @return Excel表单的表头数组。
      */
     public String[] readSheetHeaders() {
         return readSheetHeaders(0, 0);
@@ -116,7 +117,7 @@ public class ExcelReader {
      * 返回Excel表单的表头数组。默认取第一行数据为表头数据。
      *
      * @param index Excel表单的序号，从0开始计数。
-     * @return Excel表单的表头数组
+     * @return Excel表单的表头数组。
      */
     public String[] readSheetHeaders(int index) {
         return readSheetHeaders(index, 0);
@@ -127,7 +128,7 @@ public class ExcelReader {
      *
      * @param index  Excel表单的序号，从0开始计数。
      * @param rownum 表头所在行数，从0开始计数。
-     * @return Excel表单的表头数组
+     * @return Excel表单的表头数组。
      */
     public String[] readSheetHeaders(int index, int rownum) {
         return readSheetHeaders(workbook.getSheetAt(index), rownum);
@@ -136,9 +137,9 @@ public class ExcelReader {
     /**
      * 返回Excel表单的表头数组。
      *
-     * @param sheet  Excel表单
+     * @param sheet  Excel表单。
      * @param rownum 表头所在行数，从0开始计数。
-     * @return Excel表单的表头数组
+     * @return Excel表单的表头数组。
      */
     private String[] readSheetHeaders(Sheet sheet, int rownum) {
         Row row = sheet.getRow(rownum);
@@ -194,6 +195,14 @@ public class ExcelReader {
         return match(clazz, merge(list), ExcelAnnotationUtils.getNameDirectory(clazz));
     }
 
+    /**
+     * 返回由表单中的所有数据行转换成的对象数组。
+     *
+     * @param clazz Excel工作簿转换的目标类型
+     * @param names 需要解析的Excel工作簿表单名称数组。
+     * @return 表单中所有内容，不包含表头。
+     * @see ExcelError Excel工作簿的单元格的错误信息。
+     */
     public <T> T[] readSheetContent(Class<T> clazz, String... names) {
         List<Map<String, String>[]> list = new ArrayList<>(names.length);
         for (String name : names) {
@@ -207,7 +216,7 @@ public class ExcelReader {
      * 内容格式为：<br/>
      * 表头名:内容
      *
-     * @param sheet Excel工作簿中的表单对象
+     * @param sheet Excel工作簿中的表单对象。
      * @return 表单中所有内容，不包含表头。
      * @see ExcelError Excel工作簿的单元格的错误信息。
      */
@@ -233,6 +242,12 @@ public class ExcelReader {
         return contents.stream().toArray(Map[]::new);
     }
 
+    /**
+     * 合并集合中的所有的装载有Excel工作簿的表单内容的Map集合。
+     *
+     * @param contents Excel工作簿的表单内容的Map集合。
+     * @return Excel工作簿的所有表单内容的Map集合。
+     */
     @SuppressWarnings("unchecked")
     public Map<String, String>[] merge(List<Map<String, String>[]> contents) {
         if (Objects.isNull(contents)) {
@@ -251,10 +266,10 @@ public class ExcelReader {
     /**
      * 将Excel数据匹配到Java对象中。
      *
-     * @param clazz      Java对象类型
-     * @param contents   需要进行匹配的数据
-     * @param dictionary 进行匹配时的字段对照字典
-     * @param <T>        Java对象类型，用来强制转换数组类型
+     * @param clazz      Java对象类型。
+     * @param contents   需要进行匹配的数据。
+     * @param dictionary 进行匹配时的字段对照字典。
+     * @param <T>        Java对象类型，用来强制转换数组类型。
      * @return Java对象数组
      */
     @SuppressWarnings({"unchecked", "serial"})
@@ -264,8 +279,10 @@ public class ExcelReader {
                 .registerTypeAdapter(LocalDate.class,
                         (JsonSerializer<LocalDate>) (json, typeOfT, context) ->
                                 new JsonPrimitive(json.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))))
+//                                new JsonPrimitive(json.format(DateTimeFormatter.ofPattern("yyyy/M/d"))))
                 .registerTypeAdapter(LocalDate.class,
                         (JsonDeserializer<LocalDate>) (json, typeOfT, context) ->
+//                                LocalDate.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("yyyy/M/d")))
                                 LocalDate.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("yyyy-MM-dd")))
                 .registerTypeAdapter(LocalTime.class,
                         (JsonSerializer<LocalTime>) (json, typeOfT, context) ->
@@ -282,10 +299,6 @@ public class ExcelReader {
                 .create();
 
         List<Map<String, String>> list = new ArrayList<>();
-//        Arrays.asList(contents).stream().forEach(content -> content.entrySet().stream().forEach(
-//                entry -> list.add(new HashMap<String, String>() {{put(dictionary.get(entry.getKey()), entry.getValue());}}))
-//        );
-//        Arrays.asList(contents).stream().forEach();
         for (Map<String, String> content : contents) {
             Map<String, String> map = new HashMap<>(content.size());
             for (Map.Entry<String, String> entry : content.entrySet()) {
@@ -301,11 +314,15 @@ public class ExcelReader {
     /**
      * 返回单元格的内容。
      *
-     * @param cell 单元格
-     * @return 单元格的内容
+     * @param cell 单元格。
+     * @return 单元格的内容。
      */
     private String getCellValue(@NotNull Cell cell, @NotNull ExcelError error) {
+        if (Objects.isNull(cell)) {
+            return null;
+        }
         DataFormatter formatter = new DataFormatter();
+
         ExcelStyleDateFormatter dateFormatter = new ExcelStyleDateFormatter("yyyy-MM-dd");
 
         int cellType = cell.getCellType();
@@ -317,9 +334,8 @@ public class ExcelReader {
         }
         switch (cellType) {
             case Cell.CELL_TYPE_BLANK:      // 单元格数据为空时直接返回null，表示此单元格数据无效。
-                error.put(new CellReference(cell), "单元格不能为空。");
-                log.warn("单元格{}不能为空。", new CellReference(cell).formatAsString());
-                return null;
+                log.warn("单元格{}为空。", new CellReference(cell).formatAsString());
+                return "";
             case Cell.CELL_TYPE_ERROR:      // 单元格数据错误，返回错误信息。
                 error.put(new CellReference(cell), "单元格数据错误[" + FormulaError.forInt(cell.getErrorCellValue()).getString() + "]。");
                 log.warn("单元格数据错误[{}]。", FormulaError.forInt(cell.getErrorCellValue()).getString());
@@ -333,7 +349,7 @@ public class ExcelReader {
                 if (DateUtil.isCellDateFormatted(cell)) {
                     return dateFormatter.format(cell.getDateCellValue());
                 }
-                return formatter.formatCellValue(cell);
+                return formatter.formatCellValue(cell).replace(",", "");
             default:
                 error.put(new CellReference(cell), "未知的单元格数值[" + formatter.formatCellValue(cell) + "]！");
                 log.warn("未知的单元格数值[{}]！", formatter.formatCellValue(cell));
@@ -344,7 +360,7 @@ public class ExcelReader {
     /**
      * 验证Excel文件的数据行是否有效，数据默认从第一列开始。
      *
-     * @param row Excel文件的数据行
+     * @param row Excel文件的数据行。
      * @return 数据行的有效性。true - 有效， false - 无效。
      */
     private boolean isValid(Row row) {
@@ -354,8 +370,8 @@ public class ExcelReader {
     /**
      * 验证Excel文件的数据行是否有效。
      *
-     * @param row       Excel文件的数据行
-     * @param dataIndex 数据的开始列的索引
+     * @param row       Excel文件的数据行。
+     * @param dataIndex 数据的开始列的索引。
      * @return 数据行的有效性。true - 有效， false - 无效。
      */
     private boolean isValid(Row row, short dataIndex) {

@@ -45,7 +45,7 @@
             },
             columns: [{
                 template: "<div class='customer-photo'" +
-                "style='background-image: url(http://localhost:8080/board/resources/stylesheet/content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                "style='background-image: url(http://localhost:8080/board/resources/stylesheet/content/web/Customers/#:credit.CustomerID#.jpg);'></div>" +
                 "<div class='customer-name'>#: ContactName #</div>",
                 field: "ContactName",
                 column: "Contact Name",

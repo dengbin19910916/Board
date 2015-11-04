@@ -113,7 +113,7 @@
                                         message.user + '.');
                         }
                     } else {
-                        modalErrorBody.text('Unexpected data type [' + typeof(event.data) + '].');
+                        modalErrorBody.text('Unexpected credit type [' + typeof(event.data) + '].');
                         modalError.modal('show');
                     }
                 };

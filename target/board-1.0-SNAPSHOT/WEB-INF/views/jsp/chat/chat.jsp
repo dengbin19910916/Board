@@ -11,7 +11,7 @@
 
             </div>
             <div id="messageContainer">
-                <textarea id="messageArea" title="聊天日志"></textarea>
+                <textarea id="messageArea" column="聊天日志"></textarea>
             </div>
             <div id="buttonContainer">
                 <button class="btn btn-primary" onclick="send();">Send</button>
@@ -113,7 +113,7 @@
                                         message.user + '.');
                         }
                     } else {
-                        modalErrorBody.text('Unexpected data type [' + typeof(event.data) + '].');
+                        modalErrorBody.text('Unexpected credit type [' + typeof(event.data) + '].');
                         modalError.modal('show');
                     }
                 };

@@ -7,65 +7,99 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28145a1e-d1b6-4bd3-94b5-67237b10042d" name="Default" comment="修改ExcelReader对Excel文件数据读取的逻辑。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Book.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/BookTypeAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/ExcelError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelWriter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LowercaseEnumTypeAdapterFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/MultisetTypeAdapterFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/TimeTypeAdapterFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/dengb.xml" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\src\main\java\com\wrox\utils\excel\ExcelAnnotationParser.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\board-1.0-SNAPSHOT\WEB-INF\lib\commons-lang3-3.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\board-1.0-SNAPSHOT\WEB-INF\lib\guava-16.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\classes\com\wrox\utils\excel\ExcelAnnotationParser.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\classes\com\wrox\utils\excel\annotation\Sheet.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\classes\com\wrox\utils\excel\annotation\Title.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\WorkSpace\IdeaProjects\Board\target\classes\com\wrox\utils\excel\annotation\Workbook.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\WorkSpace\IdeaProjects\Board\.idea\libraries\Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="MOVED" beforePath="C:\WorkSpace\IdeaProjects\Board\src\main\java\com\wrox\utils\excel\annotation\Sheet.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelSheet.java" />
-      <change type="MOVED" beforePath="C:\WorkSpace\IdeaProjects\Board\src\main\java\com\wrox\utils\excel\annotation\Title.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java" />
-      <change type="MOVED" beforePath="C:\WorkSpace\IdeaProjects\Board\src\main\java\com\wrox\utils\excel\annotation\Workbook.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelWorkbook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/DefaultExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/DefaultExcelReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelAnnotationParser.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelAnnotationParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/ExcelReaderUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/ExcelReaderUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Excels.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Excels.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" />
+    <list default="true" id="28145a1e-d1b6-4bd3-94b5-67237b10042d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_examples_3_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_scratchpad_3_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_1_2_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/CustomerManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excel2007Reader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/IRowReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/AbstractExcel2007Writer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/CellDataType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/DefaultRowHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/DefaultRowReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel07Reader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel2007Reader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelParseException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelReaderHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Reader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/RowHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/RowReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/SAXParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/SheetHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/TestSAX.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/eg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sharedStrings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sheet1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/workbook.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/WriteBigFileComparsion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/行员管理.xlsx" afterPath="$PROJECT_DIR$/file/行员管理.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.iml" afterPath="$PROJECT_DIR$/Board.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/repositories/InMemoryReplyRepository.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/repositories/InMemoryReplyRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/ChatEndpoint.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/ChatEndpoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultDiscussionService.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultDiscussionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultSessionRegistry.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/services/DefaultSessionRegistry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/DefaultExcelReader.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/DefaultExcelReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelReaderUtil.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/ExcelReaderUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Clerk.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/ExcelReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Excels.class" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/com/wrox/utils/excel/Excels.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/repositories/InMemoryReplyRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/repositories/InMemoryReplyRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/ChatEndpoint.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/ChatEndpoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultDiscussionService.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultDiscussionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultSessionRegistry.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/services/DefaultSessionRegistry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Excels.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Board_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/DefaultExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/DefaultExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReaderUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReaderUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/integration/sushi/about.html" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/integration/sushi/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/mobile/apps/sushi/about.html" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/mobile/apps/sushi/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/web/window/ajax/ajaxContent.html" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/web/window/ajax/ajaxContent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/web/window/ajax/ajaxContent1.html" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/web/window/ajax/ajaxContent1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/web/datasource/books.xml" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/web/datasource/books.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/chat/chat.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/chat/chat.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/create.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/errorNoDiscussion.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/errorNoDiscussion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/indicator.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/indicator.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/shared/inspector/inspector.less" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/shared/inspector/inspector.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/list.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/tags/template/main.tag" afterPath="$PROJECT_DIR$/web/WEB-INF/tags/template/main.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/portfolio.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/portfolio.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/stylesheet/content/mobile/view/remoteview.html" afterPath="$PROJECT_DIR$/web/resources/stylesheet/content/mobile/view/remoteview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/upload.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/upload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/view.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/discussion/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dengb.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dengb.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.iml" afterPath="$PROJECT_DIR$/Board.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/log4j2.xml" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/classes/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/tags/template/main.tag" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/tags/template/main.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/chat/chat.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/chat/chat.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/create.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/create.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/errorNoDiscussion.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/errorNoDiscussion.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/list.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/view.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/discussion/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/indicator.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/indicator.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/portfolio.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/portfolio.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/upload.jsp" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/WEB-INF/views/jsp/performance/upload.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/integration/sushi/about.html" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/integration/sushi/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/mobile/apps/sushi/about.html" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/mobile/apps/sushi/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/mobile/view/remoteview.html" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/mobile/view/remoteview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/shared/inspector/inspector.less" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/shared/inspector/inspector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/datasource/books.xml" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/datasource/books.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/window/ajax/ajaxContent.html" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/window/ajax/ajaxContent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/window/ajax/ajaxContent1.html" afterPath="$PROJECT_DIR$/target/board-1.0-SNAPSHOT/resources/stylesheet/content/web/window/ajax/ajaxContent1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/chat/chat.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/chat/chat.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/portfolio.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/jsp/performance/portfolio.jsp" />
     </list>
     <ignored path="Board.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,60 +122,31 @@
     <favorites_list name="Board" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Excels.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6283784">
-              <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelAnnotationUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationUtils.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Collection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+              <caret line="600" column="36" selection-start-line="600" selection-start-column="22" selection-end-line="600" selection-end-column="36" />
               <folding>
+                <element signature="e#0#27819#0" expanded="false" />
                 <element signature="imports" expanded="false" />
-                <element signature="e#431#432#0" expanded="false" />
-                <element signature="e#454#455#0" expanded="false" />
+                <element signature="e#26270#26271#0" expanded="false" />
+                <element signature="e#26326#26327#0" expanded="false" />
+                <element signature="e#26957#26958#0" expanded="false" />
+                <element signature="e#27022#27023#0" expanded="false" />
+                <element signature="e#27751#27752#0" expanded="false" />
+                <element signature="e#27815#27816#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelWriter.java">
+      <file leaf-file-name="sheet1.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sheet1.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Clerk.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelColumn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -151,19 +156,83 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <caret line="165" column="51" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Excels.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="7.6235094">
+              <caret line="336" column="79" selection-start-line="336" selection-start-column="79" selection-end-line="336" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Credit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelColumn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/eg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Excel2007Reader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel2007Reader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="173" column="42" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1966#1967#0" expanded="false" />
+                <element signature="e#2010#2011#0" expanded="false" />
+                <element signature="e#8847#8848#0" expanded="false" />
+                <element signature="e#8886#8887#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -199,37 +268,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/Book.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExportExcel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/SystemUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/Sheet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/Header.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/Clerk.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/controllers/AuthenticationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Title.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Sheet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Workbook.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/CloneUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/CloneUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/controllers/TicketController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/services/DefaultTicketService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/DefaultExcelReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/Sheet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/AnnotationParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/Header.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/Workbook.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/Sheet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Reader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/Workbook.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/AnnotationUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/ExcelErrors.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/Title.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/model/ExcelError.java" />
@@ -239,21 +277,53 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LowercaseEnumTypeAdapterFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/MultisetTypeAdapterFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/Abs.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/DefaultExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReaderUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelWriter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/CustomerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/WriteBigFileComparsion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excel2007Reader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/IRowReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/AbstractExcel2007Writer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelParseException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/RowReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/DefaultRowReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/SAXParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/TestSAX.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel07Reader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/RowHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/DefaultRowHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Reader.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel2007Reader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/workbook.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sheet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sheet1.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sharedStrings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/styles.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/CellDataType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/eg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/SheetHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
@@ -321,9 +391,6 @@
         </PATH_ELEMENT>
       </PATH>
     </treeState>
-  </component>
-  <component name="NamedScopeManager">
-    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
@@ -407,17 +474,21 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Board" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -578,7 +649,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="excel" />
+              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -617,10 +688,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="excel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -668,10 +735,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -679,17 +748,34 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExcelConvert" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last.edited.regexp" value="upload.luo&#10;" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="228" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="254" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="256" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1152" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="228" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="254" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="256" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1152" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.wrox.utils.excel.operator" />
+      <recent name="com.wrox.utils.excel" />
       <recent name="com.wrox.utils.excel.model" />
       <recent name="com.wrox.services" />
     </key>
@@ -712,6 +798,86 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Test">
+    <configuration default="false" name="FromHowTo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wrox.utils.excel.operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wrox.utils.excel.operator.FromHowTo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Board" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Excel2007Reader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wrox.utils.excel.operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wrox.utils.excel.operator.Excel2007Reader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Board" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestSAX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wrox.utils.excel.operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wrox.utils.excel.operator.TestSAX" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Board" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Reader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wrox.utils.excel.operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wrox.utils.excel.operator.Reader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Board" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -720,11 +886,11 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.wrox.Test" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -767,6 +933,15 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -788,6 +963,15 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -810,6 +994,65 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -927,12 +1170,62 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Board" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -999,6 +1292,34 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1008,13 +1329,19 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+    <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
@@ -1088,13 +1415,20 @@
         </option>
       </method>
     </configuration>
-    <list size="2">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.FromHowTo" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Excel2007Reader" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestSAX" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Reader" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Test" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.FromHowTo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Reader" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestSAX" />
       </list>
     </recent_temporary>
   </component>
@@ -1226,7 +1560,35 @@
       <workItem from="1445534993931" duration="3275000" />
       <workItem from="1445563195168" duration="14927000" />
       <workItem from="1445613598302" duration="2368000" />
-      <workItem from="1445656491027" duration="4916000" />
+      <workItem from="1445656491027" duration="6662000" />
+      <workItem from="1445684539399" duration="2660000" />
+      <workItem from="1445690264404" duration="7422000" />
+      <workItem from="1445741076295" duration="13078000" />
+      <workItem from="1445790675104" duration="4624000" />
+      <workItem from="1445822220742" duration="14206000" />
+      <workItem from="1445866375154" duration="4511000" />
+      <workItem from="1445873775910" duration="3035000" />
+      <workItem from="1445909413042" duration="2787000" />
+      <workItem from="1445912256369" duration="5858000" />
+      <workItem from="1445927214310" duration="6535000" />
+      <workItem from="1445961307062" duration="3768000" />
+      <workItem from="1446031993886" duration="13098000" />
+      <workItem from="1446053665260" duration="627000" />
+      <workItem from="1446082203999" duration="16684000" />
+      <workItem from="1446169511985" duration="5212000" />
+      <workItem from="1446216239190" duration="1565000" />
+      <workItem from="1446224158212" duration="1955000" />
+      <workItem from="1446260560930" duration="6159000" />
+      <workItem from="1446306739459" duration="1240000" />
+      <workItem from="1446348049093" duration="9969000" />
+      <workItem from="1446383297516" duration="623000" />
+      <workItem from="1446470171087" duration="1956000" />
+      <workItem from="1446512003447" duration="403000" />
+      <workItem from="1446514643589" duration="3611000" />
+      <workItem from="1446606987173" duration="622000" />
+      <workItem from="1446609116389" duration="1859000" />
+      <workItem from="1446611706762" duration="347000" />
+      <workItem from="1446612079536" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="添加FileUtil&#10;">
       <created>1443362611176</created>
@@ -1258,77 +1620,52 @@
       <option name="project" value="LOCAL" />
       <updated>1445078559468</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Excel文件1.0v完成">
+      <created>1445667372653</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1445667372653</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531319000" />
+    <option name="totallyTimeSpent" value="668448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.496875" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2395722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32467532" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25104168" sideWeight="0.48584905" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24791667" sideWeight="0.5141509" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="848" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.496875" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2395722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32349727" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26458332" sideWeight="0.48584905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24791667" sideWeight="0.5141509" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="848" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2395722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.496875" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="848" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30952382" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2375" sideWeight="0.48584905" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24791667" sideWeight="0.5141509" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1347,11 +1684,12 @@
     <MESSAGE value="FileUtils完成对系统默认路径的文件创建处理。" />
     <MESSAGE value="修改FileUtils中的PathType，添加Excel文件处理" />
     <MESSAGE value="修改ExcelReader对Excel文件数据读取的逻辑。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改ExcelReader对Excel文件数据读取的逻辑。" />
+    <MESSAGE value="Excel文件1.0v完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Excel文件1.0v完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1360,382 +1698,387 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.4/gson-2.4-sources.jar!/com/google/gson/Gson.java">
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/io/InputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3052807">
-          <caret line="125" column="60" selection-start-line="125" selection-start-column="60" selection-end-line="125" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.9561551">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/jxl/CellType.class">
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/org/xml/sax/InputSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3426087">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state vertical-scroll-proportion="2.4586847">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/jxl/CellFeatures.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28173912">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/jxl/Cell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67826086">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/eventusermodel/XSSFReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/util/CellReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="467" column="18" selection-start-line="467" selection-start-column="18" selection-end-line="467" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="609" column="13" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.0.2/log4j-api-2.0.2.jar!/org/apache/logging/log4j/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58434784">
-          <caret line="259" column="9" selection-start-line="259" selection-start-column="9" selection-end-line="259" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFDataFormat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/RowHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFCellStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42244226">
-          <caret line="438" column="54" selection-start-line="438" selection-start-column="54" selection-end-line="438" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/hssf/usermodel/HSSFDataFormatter.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/model/StylesTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/hssf/usermodel/HSSFDataFormat.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/openxml4j/opc/Package.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.6053963">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/FileUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/POIXMLDocumentPart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0033003">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="-17.166948">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/DataFormat.java">
+    <entry file="file://$MAVEN_REPOSITORY$/org/apache/poi/openxml4j/1.0-beta/openxml4j-1.0-beta.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.7301855">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/com.wrox.utils.excel">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.wrox.utils.excel</OriginalElement>
-          <nodes>
-            <node x="" y="">com.wrox.utils.excel.Book</node>
-            <node x="" y="">com.wrox.utils.excel.Clerk</node>
-            <node x="" y="">com.wrox.utils.excel.ExcelAnnotationParser</node>
-            <node x="" y="">com.wrox.utils.excel.annotation</node>
-            <node x="" y="">com.wrox.utils.excel.AnnotationUtils</node>
-            <node x="" y="">com.wrox.utils.excel.model</node>
-            <node x="" y="">com.wrox.utils.excel.adapter</node>
-            <node x="" y="">com.wrox.utils.excel.ExcelReader</node>
-            <node x="" y="">com.wrox.utils.excel.Excels</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="197.0" y="175.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.4/gson-2.4-sources.jar!/com/google/gson/JsonPrimitive.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/openxml4j/1.0-beta/openxml4j-1.0-beta.jar!/org/openxml4j/samples/GetThumbnails.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1804932">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.4/gson-2.4-sources.jar!/com/google/gson/GsonBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21188341">
-          <caret line="442" column="36" selection-start-line="442" selection-start-column="31" selection-end-line="442" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/lang/reflect/Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/DefaultExcelReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5346534">
-          <caret line="282" column="5" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReaderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15511551">
-          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="492" column="30" selection-start-line="492" selection-start-column="30" selection-end-line="492" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/stream/StreamSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3778878">
-          <caret line="580" column="34" selection-start-line="580" selection-start-column="34" selection-end-line="580" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/FormulaEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/text/NumberFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33295965">
-          <caret line="289" column="24" selection-start-line="289" selection-start-column="24" selection-end-line="289" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/ExcelStyleDateFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-          <folding>
-            <element signature="e#3040#3041#0" expanded="false" />
-            <element signature="e#3120#3121#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/CellStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="247" column="10" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/text/DecimalFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1385542">
-          <caret line="398" column="11" selection-start-line="398" selection-start-column="11" selection-end-line="398" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/DataFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="840" column="7" selection-start-line="840" selection-start-column="7" selection-end-line="846" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#43581#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8131#8132#0" expanded="false" />
-            <element signature="e#8203#8204#0" expanded="false" />
-            <element signature="e#26146#26147#0" expanded="false" />
-            <element signature="e#26187#26188#0" expanded="false" />
-            <element signature="e#26356#26357#0" expanded="false" />
-            <element signature="e#26423#26424#0" expanded="false" />
-            <element signature="e#31611#31612#0" expanded="false" />
-            <element signature="e#31661#31662#0" expanded="false" />
-            <element signature="e#35349#35350#0" expanded="false" />
-            <element signature="e#35400#35401#0" expanded="false" />
-            <element signature="e#37053#37054#0" expanded="false" />
-            <element signature="e#37098#37099#0" expanded="false" />
-            <element signature="e#39717#39718#0" expanded="false" />
-            <element signature="e#39775#39776#0" expanded="false" />
-            <element signature="e#40877#40878#0" expanded="false" />
-            <element signature="e#40935#40936#0" expanded="false" />
-            <element signature="e#42557#42558#0" expanded="false" />
-            <element signature="e#42615#42616#0" expanded="false" />
-            <element signature="e#43228#43229#0" expanded="false" />
-            <element signature="e#43259#43260#0" expanded="false" />
-            <element signature="e#43513#43514#0" expanded="false" />
-            <element signature="e#43571#43572#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/text/Format.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+        <state vertical-scroll-proportion="-0.0569395">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/eventusermodel/XSSFReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/org/xml/sax/ContentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/org/xml/sax/Attributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8785834">
+          <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/DataFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="27.854975">
+          <caret line="758" column="32" selection-start-line="758" selection-start-column="32" selection-end-line="758" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="22.340641">
+          <caret line="532" column="27" selection-start-line="532" selection-start-column="27" selection-end-line="532" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/text/NumberFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="380" column="18" selection-start-line="380" selection-start-column="18" selection-end-line="380" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/openxml4j/opc/OPCPackage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="215" column="29" selection-start-line="215" selection-start-column="29" selection-end-line="215" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322034">
-          <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="-2.5426009">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Map.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel07Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322034">
-          <caret line="359" column="25" selection-start-line="359" selection-start-column="25" selection-end-line="359" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.18273543">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/lang/SuppressWarnings.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/AnnotationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.22765599">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/function/Consumer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-          <folding>
-            <element signature="e#177013#177014#0" expanded="false" />
-            <element signature="e#177054#177055#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.45945945">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelAnnotationUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/workbook.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml-schemas/3.13/poi-ooxml-schemas-3.13.jar!/org/openxmlformats/schemas/spreadsheetml/x2006/main/CTXf.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2229965">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFCellStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.532511">
+          <caret line="426" column="36" selection-start-line="426" selection-start-column="36" selection-end-line="426" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/BuiltinFormats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2410314">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sharedStrings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/CellDataType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/stream/ReferencePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.30522767">
+          <caret line="427" column="25" selection-start-line="427" selection-start-column="25" selection-end-line="427" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="555" column="12" selection-start-line="555" selection-start-column="12" selection-end-line="555" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322091">
+          <caret line="345" column="16" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/org/apache/xerces/impl/XMLNSDocumentScannerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29181495">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/org/apache/xerces/impl/XMLDocumentFragmentScannerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29181495">
+          <caret line="734" column="23" selection-start-line="734" selection-start-column="23" selection-end-line="734" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/org/apache/xerces/parsers/AbstractXMLDocumentParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29181495">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/org/apache/xerces/parsers/AbstractSAXParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29181495">
+          <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.7099495">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.013490725">
+          <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/xssf/usermodel/XSSFWorkbook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="271" column="36" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#431#432#0" expanded="false" />
-            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#3950#3951#0" expanded="false" />
+            <element signature="e#3988#3989#0" expanded="false" />
+            <element signature="e#4146#4147#0" expanded="false" />
+            <element signature="e#4198#4199#0" expanded="false" />
+            <element signature="e#11111#11112#0" expanded="false" />
+            <element signature="e#11153#11154#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.13/poi-3.13-sources.jar!/org/apache/poi/ss/usermodel/Workbook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="362" column="9" selection-start-line="362" selection-start-column="9" selection-end-line="362" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/FromHowTo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <caret line="117" column="36" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#5664#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3520#3521#0" expanded="false" />
+            <element signature="e#3558#3559#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelWorkbook.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/SheetHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="600" column="36" selection-start-line="600" selection-start-column="22" selection-end-line="600" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#27819#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#26270#26271#0" expanded="false" />
+            <element signature="e#26326#26327#0" expanded="false" />
+            <element signature="e#26957#26958#0" expanded="false" />
+            <element signature="e#27022#27023#0" expanded="false" />
+            <element signature="e#27751#27752#0" expanded="false" />
+            <element signature="e#27815#27816#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/sheet1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/eg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelSheet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excel2007Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17905405">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="42" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1966#1967#0" expanded="false" />
+            <element signature="e#2010#2011#0" expanded="false" />
+            <element signature="e#8847#8848#0" expanded="false" />
+            <element signature="e#8886#8887#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="51" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/ExcelReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1743,60 +2086,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Clerk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tools/Java/jdk1.8.0_60/src.zip!/java/nio/file/Paths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8344595">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar!/org/apache/poi/ss/usermodel/WorkbookFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="227" column="27" selection-start-line="227" selection-start-column="27" selection-end-line="227" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6283784">
-          <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="7.6235094">
+          <caret line="336" column="79" selection-start-line="336" selection-start-column="79" selection-end-line="336" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
