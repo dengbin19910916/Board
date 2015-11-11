@@ -21,7 +21,7 @@ public class Credit {
     @ExcelColumn("合同编号")
     private String contractNo;
     @ExcelColumn("借据编号")
-    private String iousNo;
+    private String loans;
     @ExcelColumn("产品名称")
     private String productName;
     @ExcelColumn("担保方式")
@@ -44,21 +44,21 @@ public class Credit {
     private double loanPeriod;
     @ExcelColumn("贷款年利率（%）")
     private double  annualPercentageRate;
-    @ExcelColumn("发放日期")
+    @ExcelColumn(value = "发放日期", dateFormat = "yyyy/MM/dd")
     private LocalDate issueDate;
-    @ExcelColumn("到期日期")
+    @ExcelColumn(value = "到期日期", dateFormat = "yyyy/MM/dd")
     private LocalDate maturityDate;
     @ExcelColumn("应收本金(元)")
     private double receivables;
     @ExcelColumn("已收本金(元)")
     private double alreadyReceivedPrincipal;
-    @ExcelColumn("拖欠本金起始日期")
+    @ExcelColumn(value = "拖欠本金起始日期", dateFormat = "yyyy/MM/dd")
     private LocalDate principalStartDate;
     @ExcelColumn("应收利息(元)")
     private double interestReceivable;
     @ExcelColumn("已收利息(元)")
     private double interestPaid;
-    @ExcelColumn("拖欠利息起始日期")
+    @ExcelColumn(value = "拖欠利息起始日期", dateFormat = "yyyy/MM/dd")
     private LocalDate interestStartDate;
     @ExcelColumn("表内应收利息(元)")
     private double tableShouldReceiveInterest;
@@ -121,12 +121,12 @@ public class Credit {
         this.contractNo = contractNo;
     }
 
-    public String getIousNo() {
-        return iousNo;
+    public String getLoans() {
+        return loans;
     }
 
-    public void setIousNo(String iousNo) {
-        this.iousNo = iousNo;
+    public void setLoans(String loans) {
+        this.loans = loans;
     }
 
     public String getProductName() {
@@ -431,7 +431,7 @@ public class Credit {
                 "clientId='" + clientId + '\'' +
                 ", clientName='" + clientName + '\'' +
                 ", contractNo='" + contractNo + '\'' +
-                ", iousNo='" + iousNo + '\'' +
+                ", loans='" + loans + '\'' +
                 ", productName='" + productName + '\'' +
                 ", guarantyStyle='" + guarantyStyle + '\'' +
                 ", loansSubjects='" + loansSubjects + '\'' +

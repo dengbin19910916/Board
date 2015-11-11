@@ -9,7 +9,10 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 /**
- * Created by Dengbin on 2015/10/4.
+ * Excel注解的处理工具。
+ *
+ * @author dengb
+ * @version 1.0
  */
 public class ExcelAnnotationUtils {
     private static final Logger log = LogManager.getLogger();
@@ -58,6 +61,12 @@ public class ExcelAnnotationUtils {
         return directory;
     }
 
+    /**
+     * 返回基本类型的包装类型。
+     *
+     * @param clz 基本类型。
+     * @return 对应的包装类型。
+     */
     private static Class getWrapType(Class clz) {
         if (clz == byte.class) {
             return Byte.class;

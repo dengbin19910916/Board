@@ -121,7 +121,7 @@ public final class FileUtils {
     /**
      * 创建文件。<br/>
      * 文件中不能包含非法字符"<", ">", " "，<br/>
-     * 父子路径可以使用"."， "/"， "\"， "|"， ":"， """， "*"， "?"分隔，非法符号将被去除。。<br/>
+     * 父子路径可以使用"."， "/"， "\"， "|"， ":"， """， "*"， "?"分隔，非法符号将被去除。<br/>
      * 例如：<br/>
      * scott.ticket.attachment.a.txt => %BASE_PATH%\scott\ticket\attachment\a.txt
      *

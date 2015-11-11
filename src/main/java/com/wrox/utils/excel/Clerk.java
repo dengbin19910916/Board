@@ -5,6 +5,7 @@ import com.wrox.utils.excel.annotation.ExcelSheet;
 import com.wrox.utils.excel.annotation.ExcelType;
 import com.wrox.utils.excel.annotation.ExcelWorkbook;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -124,7 +125,7 @@ public class Clerk {
                 ", birthday=" + birthday +
                 ", portfolio=" + portfolio +
                 ", performance=" + performance +
-                ", issueDate=" + issueDate +
+                ", issueDate=" + new SimpleDateFormat("yyyy-M-d").format(issueDate) +
                 ", comment='" + comment + '\'' +
                 ", flag=" + flag +
                 '}';

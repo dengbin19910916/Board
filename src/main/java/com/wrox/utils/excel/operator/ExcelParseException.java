@@ -1,8 +1,20 @@
 package com.wrox.utils.excel.operator;
 
 /**
- * Created by dengb on 2015/10/27.
+ * Excel文件解析异常。
+ *
+ * @author dengb
+ * @version 1.0
  */
-public class ExcelParseException extends Exception {
-    private static final long serialVersionUID = -7893783165644497703L;
+public class ExcelParseException extends RuntimeException {
+
+    private static final long serialVersionUID = -1461206413385669567L;
+
+    public ExcelParseException() {
+        super("Excel文件错误！");
+    }
+
+    public ExcelParseException(String msg) {
+        super(msg);
+    }
 }

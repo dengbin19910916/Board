@@ -1,26 +1,16 @@
 package com.wrox;
 
 import com.wrox.utils.ExcelUtils;
-import com.wrox.utils.excel.Clerk;
-import com.wrox.utils.excel.Excels;
-import com.wrox.utils.excel.operator.CellDataType;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.model.SharedStringsTable;
-import org.apache.poi.xssf.model.StylesTable;
-import org.apache.poi.xssf.usermodel.XSSFRichTextString;
+import org.apache.poi.ss.usermodel.BuiltinFormats;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.nio.file.Paths;
 import java.text.ParseException;
-import java.util.Arrays;
 
 import static com.wrox.utils.ExcelUtils.ExcelVersion.HIGH;
 import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
@@ -31,6 +21,7 @@ import static com.wrox.utils.ExcelUtils.ExcelVersion.LOW;
 public class Test {
 
     public static final String clerk = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\行员管理.xlsx";
+//    public static final String clerk2 = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\行员管理.xls";
 
     public static final String book = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\书籍管理.xlsx";
 
@@ -38,84 +29,32 @@ public class Test {
     public static final String credit = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\信贷数据.xlsx";
     public static final String simple = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\信贷数据simple.xlsx";
 
-    /**
-     * See org.xml.sax.helpers.DefaultHandler javadocs
-     */
-    private static class StyleHandler extends DefaultHandler {
-        private SharedStringsTable sst;
-        private StylesTable st;
-        private String lastContents;
-        private boolean nextIsString;
-        private CellDataType cellDataType;
-
-        private boolean isTElement;
-
-        private StyleHandler(SharedStringsTable sst, StylesTable st) {
-            this.sst = sst;
-            this.st = st;
-        }
-
-        public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
-//            System.out.println("==>" + name + " - " + attributes.getValue("v"));
-            if (name.equals("c")) { // 单元格需要设置数据类型
-                System.out.print(attributes.getValue("r") + " - ");
-                String cellType = attributes.getValue("t");
-                nextIsString = cellType != null && cellType.equals("s");
-//                setNextDataType(attributes);
-            }
-
-            if (name.equals("f")) {
-                cellDataType = CellDataType.FORMULA;
-            }
-
-            isTElement = name.equals("t");
-            lastContents = "";  // 清空数据
-        }
-
-        /*private void setNextDataType(Attributes attributes) {
-            for (int i = 0; i < attributes.getLength(); i++) {
-                System.out.println("=>" + attributes.getValue(i));
-            }
-
-            String cellType = attributes.getValue("t"); // 日期、数值和公式没有t属性
-            if (Objects.nonNull(cellType)) {
-                switch (cellType) {
-                    case "b":
-                        cellDataType = CellDataType.BOOL;
-                        break;
-                    case "e":
-                        cellDataType = CellDataType.ERROR;
-                        break;
-                    case "inlineStr":
-                        cellDataType = CellDataType.INLINE_STR;
-                        break;
-                    case "s":
-                        cellDataType = CellDataType.SST_INDEX;
-                        break;
-                }
-                System.out.println("cell type = " + cellType);
-            }
-        }*/
-
-        public void endElement(String uri, String localName, String name) throws SAXException {
-            if(nextIsString) {
-                int idx = Integer.parseInt(lastContents);
-                lastContents = new XSSFRichTextString(sst.getEntryAt(idx)).toString();
-                nextIsString = false;
-            }
-
-            if(name.equals("v")) {
-                System.out.println(lastContents + " - " + cellDataType);
-                cellDataType = null;
-            }
-        }
-
-        public void characters(char[] ch, int start, int length) throws SAXException {
-            lastContents += new String(ch, start, length);
-        }
-    }
-
     public static void main(String[] args) throws IOException, OpenXML4JException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException, SAXException, ParseException {
+        String format = BuiltinFormats.getBuiltinFormat(177);
+        System.out.println(format);
+
+        /*int format = BuiltinFormats.getBuiltinFormat("\"$\"#,##0.00_);[Red](\"$\"#,##0.00)");   // 8
+        System.out.println(format);
+
+        DataFormatter formatter = new DataFormatter();
+//        String s = formatter.formatRawCellContents(123, 177, "\"$\"#,##0.00_);[Red](\"$\"#,##0.00)");
+//        String s = formatter.formatRawCellContents(123, 0, "#,##0.00");
+//        String s = formatter.formatRawCellContents(42298, 0, "y/m/dd");
+//        String s = formatter.formatRawCellContents(42298, 0, "yyyy-MM-dd");
+//        String s = formatter.formatRawCellContents(42298, 14, "y/m/dd");
+//        String s2 = formatter.formatRawCellContents(42298, 99999, "y/m/dd");
+//        System.out.println(s + " - " + s2);
+
+        String s = formatter.formatRawCellContents(123123123.123, 177,  "#0.00");
+        String s2 = formatter.formatRawCellContents(123.123, 8,  "_(* #,##0_);_(* (#,##0);_(* \"-\"_);_(@_)");
+
+        String s3 = formatter.formatRawCellContents(-123.123, 177,  "_(* #,##0_);_(* (#,##0);_(* \"-\"_);_(@_)");
+        String s4 = formatter.formatRawCellContents(-123.123, 8,  "_(* #,##0_);_(* (#,##0);_(* \"-\"_);_(@_)");
+
+        System.out.println(s + " - " + s2);
+        System.out.println(s3 + " - " + s4);*/
+        // ------------------------------------------
+
         // 使用事件处理Excel
        /* OPCPackage pkg = OPCPackage.open(book);
         XSSFReader reader = new XSSFReader(pkg);
@@ -159,14 +98,17 @@ public class Test {
 //        System.out.println(Arrays.toString(clerks));
         //////////////////////////////////////////////////////////////////////////////////////////////
 //        Clerk[] clerks = Excels.read(Clerk.class, Paths.get(clerk).toFile(), 0, 2);
-//        Clerk[] clerks = Excels.read(Clerk.class, new SXSSFWorkbook((XSSFWorkbook) WorkbookFactory.create(Paths.get(clerk).toFile()), 1));
-        Clerk[] clerks = Excels.read(Clerk.class, WorkbookFactory.create(Paths.get(clerk).toFile()), 1);
+//        Clerk[] clerks = Excels.read(Clerk.class, WorkbookFactory.create(Paths.get(clerk).toFile()), 1);
 //        Book[] books = Excels.read(new FileInputStream(book), Book.class);
 //        CustomerManager[] managers = Excels.read(CustomerManager.class, Paths.get(ftp));
-//        Credit[] credits = Excels.read(Credit.class, Paths.get(simple));
+        /*Credit[] credits = Excels.read(Credit.class, WorkbookFactory.create(Paths.get(simple).toFile()));
         final int[] i = {0};
-//        Arrays.asList(credits).stream().forEach(clerk -> System.out.println((++i[0]) + "=> " + clerk));
-        Arrays.asList(clerks).stream().forEach(clerk -> System.out.println((++i[0]) + "=> " + clerk));
+        Arrays.asList(credits).stream().forEach(clerk -> System.out.println((++i[0]) + "=> " + clerk));
+
+
+        Clerk[] clerks = Excels.read(Clerk.class, WorkbookFactory.create(Paths.get(clerk).toFile()));
+        i[0] = 0;
+        Arrays.asList(clerks).stream().forEach(clerk -> System.out.println((++i[0]) + "=> " + clerk));*/
 //        Arrays.asList(managers).stream().forEach(manager -> System.out.println((++i[0]) + "=> " + manager));
 
 //        Excels.write(Clerk.class, clerks);

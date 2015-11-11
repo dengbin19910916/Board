@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 读取Excel文件中的内容。
@@ -302,7 +304,16 @@ public class ExcelReader {
         for (Map<String, String> content : contents) {
             Map<String, String> map = new HashMap<>(content.size());
             for (Map.Entry<String, String> entry : content.entrySet()) {
-                map.put(dictionary.get(entry.getKey()), entry.getValue());
+                String val = entry.getValue();
+                Pattern pattern = Pattern.compile("\\d+/\\d+/\\d+");
+                if (val != null) {
+                    Matcher matcher = pattern.matcher(val);
+                    if (matcher.matches()) {
+                        String[] ds = val.split("/");
+                        val = ds[0] + "-" + (ds[1].length() == 1 ? "0" + ds[1] : ds[1]) + "-" + (ds[2].length() == 1 ? "0" + ds[2] : ds[2]);
+                    }
+                }
+                map.put(dictionary.get(entry.getKey()), val);
             }
             list.add(map);
         }
@@ -324,6 +335,8 @@ public class ExcelReader {
         DataFormatter formatter = new DataFormatter();
 
         ExcelStyleDateFormatter dateFormatter = new ExcelStyleDateFormatter("yyyy-MM-dd");
+
+        System.out.println(new CellReference(cell).formatAsString() + " - " + formatter.formatCellValue(cell));
 
         int cellType = cell.getCellType();
         if (cellType == Cell.CELL_TYPE_FORMULA) {   // 单元格为公式，将公式计算后在进行取值。

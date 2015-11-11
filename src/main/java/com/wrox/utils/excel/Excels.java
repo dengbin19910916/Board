@@ -13,10 +13,15 @@ import java.nio.file.Path;
 
 /**
  * Excel文件工具类。这个类提供一些静态方法用于读取与创建Excel文件。
- *
+ * <p>
  * Created by Dengbin on 2015/10/12.
  */
 public final class Excels {
+
+    /**
+     * 当Excel工作簿的文件大小大于5M时，Excels类将自动启用事件处理方式处理Excel工作簿。
+     */
+    public static final long FILE_SIZE_LIMIT = 1024 * 1024 * 5;
 
     public static Workbook create(File file, String password, boolean readOnly) throws IOException, InvalidFormatException {
         Workbook workbook = WorkbookFactory.create(file, password, readOnly);
@@ -31,8 +36,8 @@ public final class Excels {
      * 读取Excel文件中所有的文件内容。
      *
      * @param clazz Excel文件的映射类型对象。
-     * @param file Excel工作簿的文件对象。
-     * @param <T> Excel文件映射的目标类型。
+     * @param file  Excel工作簿的文件对象。
+     * @param <T>   Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -45,10 +50,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
-     * @param file Excel工作簿的文件对象。
+     * @param clazz  Excel文件的映射类型对象。
+     * @param file   Excel工作簿的文件对象。
      * @param indexs 需要读取的Excel工作簿中的表单序号，表单序号从0开始。
-     * @param <T> Excel文件映射的目标类型。
+     * @param <T>    Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -62,9 +67,9 @@ public final class Excels {
      * 读取Excel文件中的内容。
      *
      * @param clazz Excel文件的映射类型对象。
-     * @param file Excel工作簿的文件对象。
+     * @param file  Excel工作簿的文件对象。
      * @param names 需要解析的Excel工作簿的表单名称数组。
-     * @param <T> Excel文件映射的目标类型。
+     * @param <T>   Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -78,8 +83,8 @@ public final class Excels {
      * 读取Excel文件中的内容。
      *
      * @param filepath Excel工作簿的路径对象。
-     * @param clazz Excel文件的映射类型对象。
-     * @param <T> Excel文件映射的目标类型。
+     * @param clazz    Excel文件的映射类型对象。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -91,10 +96,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz    Excel文件的映射类型对象。
      * @param filepath Excel工作簿的路径对象。
-     * @param indexs 需要读取的Excel工作簿中的表单序号，表单序号从0开始。
-     * @param <T> Excel文件映射的目标类型。
+     * @param indexs   需要读取的Excel工作簿中的表单序号，表单序号从0开始。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -106,10 +111,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz    Excel文件的映射类型对象。
      * @param filepath Excel工作簿的文件路径对象。
-     * @param names 需要解析的Excel工作簿的表单名称数组。
-     * @param <T> Excel文件映射的目标类型。
+     * @param names    需要解析的Excel工作簿的表单名称数组。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -122,8 +127,8 @@ public final class Excels {
      * 读取Excel文件中的内容。
      *
      * @param inputStream Excel文件输入流。
-     * @param clazz Excel文件的映射类型对象。
-     * @param <T> Excel文件映射的目标类型。
+     * @param clazz       Excel文件的映射类型对象。
+     * @param <T>         Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -136,10 +141,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz       Excel文件的映射类型对象。
      * @param inputStream Excel工作簿的文件输入流对象。
-     * @param indexs 需要读取的Excel工作簿中的表单序号，表单序号从0开始。
-     * @param <T> Excel文件映射的目标类型。
+     * @param indexs      需要读取的Excel工作簿中的表单序号，表单序号从0开始。
+     * @param <T>         Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -151,10 +156,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz       Excel文件的映射类型对象。
      * @param inputStream Excel工作簿的文件输入流对象。
-     * @param names 需要解析的Excel工作簿的表单名称数组。
-     * @param <T> Excel文件映射的目标类型。
+     * @param names       需要解析的Excel工作簿的表单名称数组。
+     * @param <T>         Excel文件映射的目标类型。
      * @return 目标对象数组。
      * @throws IOException
      * @throws InvalidFormatException
@@ -168,8 +173,8 @@ public final class Excels {
      * 读取Excel文件中的内容。
      *
      * @param workbook Excel工作簿对象。
-     * @param clazz Excel文件的映射类型对象。
-     * @param <T> Excel文件映射的目标类型。
+     * @param clazz    Excel文件的映射类型对象。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      */
     public static <T> T[] read(Class<T> clazz, Workbook workbook) {
@@ -180,10 +185,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz    Excel文件的映射类型对象。
      * @param workbook Excel工作簿对象。
-     * @param indexs 需要读取的Excel工作簿中的表单序号，表单序号从0开始。
-     * @param <T> Excel文件映射的目标类型。
+     * @param indexs   需要读取的Excel工作簿中的表单序号，表单序号从0开始。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      */
     public static <T> T[] read(Class<T> clazz, Workbook workbook, int... indexs) {
@@ -194,10 +199,10 @@ public final class Excels {
     /**
      * 读取Excel文件中的内容。
      *
-     * @param clazz Excel文件的映射类型对象。
+     * @param clazz    Excel文件的映射类型对象。
      * @param workbook Excel工作簿对象。
-     * @param names 需要解析的Excel工作簿的表单名称数组。
-     * @param <T> Excel文件映射的目标类型。
+     * @param names    需要解析的Excel工作簿的表单名称数组。
+     * @param <T>      Excel文件映射的目标类型。
      * @return 目标对象数组。
      */
     public static <T> T[] read(Class<T> clazz, Workbook workbook, String... names) {
@@ -209,7 +214,17 @@ public final class Excels {
      * 创建Excel文件，并向其中写入内容。
      */
     public static <T> void write(Class<T> clazz, T[] contents) throws IOException {
-        ExcelWriter writer = new ExcelWriter();
-        writer.write(clazz, contents);
     }
+
+    /**
+     * 判断文件大小，用来决定是否启用事件处理。
+     *
+     * @param file Excel工作簿
+     * @return 是否启用事件处理。true - 启用；false - 不启用。
+     */
+    private static boolean enableEventHandling(File file) {
+        return file.length() > FILE_SIZE_LIMIT;
+    }
+
+
 }
