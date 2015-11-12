@@ -1,14 +1,8 @@
 package com.wrox.utils.file;
 
-import com.wrox.Test;
-import com.wrox.utils.excel.Credit;
-import com.wrox.utils.excel.Excels;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -41,8 +35,4 @@ public class FileUitls {
     }
 
     private static String filepath = "C:\\WorkSpace\\IdeaProjects\\Board\\file\\credit.txt";
-
-    public static void main(String[] args) throws IOException, InvalidFormatException {
-        generate(new File(filepath), Excels.read(Credit.class, Paths.get(Test.simple)));
-    }
 }

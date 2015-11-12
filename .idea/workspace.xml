@@ -8,23 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28145a1e-d1b6-4bd3-94b5-67237b10042d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LocalDateTimeTypeAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LocalTimeTypeAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/Clerk.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/com/wrox/utils/excel/ExcelReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Credit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LocalDateTypeAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/adapter/LocalDateTypeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/AnnotationExcelMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/AnnotationExcelMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/CellReference.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/CellReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/GeneralExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/GeneralExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/HSSFExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/HSSFExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/package-info.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java" afterPath="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java" />
     </list>
     <ignored path="Board.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,11 +80,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/HSSFExcelReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,21 +100,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelWriter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExcelWriter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42631578">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23684211">
+              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUitls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -150,16 +145,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="343" column="39" selection-start-line="343" selection-start-column="39" selection-end-line="343" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -195,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/event/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/event/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/event/RowHandler.java" />
@@ -244,8 +228,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/HSSFExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wrox/Test.java" />
       </list>
     </option>
   </component>
@@ -1539,7 +1524,7 @@
       <workItem from="1447211515158" duration="14147000" />
       <workItem from="1447234043296" duration="255000" />
       <workItem from="1447254536991" duration="2232000" />
-      <workItem from="1447289369328" duration="5089000" />
+      <workItem from="1447289369328" duration="6300000" />
     </task>
     <task id="LOCAL-00001" summary="添加FileUtil&#10;">
       <created>1443362611176</created>
@@ -1589,11 +1574,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447230506042</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="rp">
+      <created>1447294948558</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1447294948558</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="804081000" />
+    <option name="totallyTimeSpent" value="805292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1651,7 +1642,8 @@
     <MESSAGE value="Excel文件1.0v完成" />
     <MESSAGE value="Excel文件1.0v修改完成。" />
     <MESSAGE value="添加对xlsx大文件的事件处理。" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加对xlsx大文件的事件处理。" />
+    <MESSAGE value="rp" />
+    <option name="LAST_COMMIT_MESSAGE" value="rp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1664,14 +1656,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/annotation/ExcelColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0-rc2/guava-19.0-rc2-sources.jar!/com/google/common/collect/Multiset.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5198188">
@@ -2019,14 +2003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/Excels.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2039,6 +2015,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="343" column="39" selection-start-line="343" selection-start-column="39" selection-end-line="343" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/file/FileUitls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -2058,29 +2060,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/HSSFExcelReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/Excels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/utils/excel/operator/ExcelWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wrox/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42631578">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.23684211">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
           <folding />
         </state>
       </provider>
