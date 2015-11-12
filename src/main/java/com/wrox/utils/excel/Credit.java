@@ -33,51 +33,51 @@ public class Credit {
     @ExcelColumn("还款方式")
     private String repaymentMethod;
     @ExcelColumn("合同金额(元)")
-    private double contractAmount;
+    private Double contractAmount;
     @ExcelColumn("贷款金额（元）")
-    private double loanAmount;
+    private Double loanAmount;
     @ExcelColumn("累计放款金额(元)")
-    private double totalLoanAmount;
+    private Double totalLoanAmount;
     @ExcelColumn("贷款余额(元)")
-    private double loanBalance;
+    private Double loanBalance;
     @ExcelColumn("贷款期限(月)")
-    private double loanPeriod;
+    private Double loanPeriod;
     @ExcelColumn("贷款年利率（%）")
-    private double  annualPercentageRate;
+    private Double  annualPercentageRate;
     @ExcelColumn(value = "发放日期", dateFormat = "yyyy/MM/dd")
     private LocalDate issueDate;
     @ExcelColumn(value = "到期日期", dateFormat = "yyyy/MM/dd")
     private LocalDate maturityDate;
     @ExcelColumn("应收本金(元)")
-    private double receivables;
+    private Double receivables;
     @ExcelColumn("已收本金(元)")
-    private double alreadyReceivedPrincipal;
+    private Double alreadyReceivedPrincipal;
     @ExcelColumn(value = "拖欠本金起始日期", dateFormat = "yyyy/MM/dd")
     private LocalDate principalStartDate;
     @ExcelColumn("应收利息(元)")
-    private double interestReceivable;
+    private Double interestReceivable;
     @ExcelColumn("已收利息(元)")
-    private double interestPaid;
+    private Double interestPaid;
     @ExcelColumn(value = "拖欠利息起始日期", dateFormat = "yyyy/MM/dd")
     private LocalDate interestStartDate;
-    @ExcelColumn("表内应收利息(元)")
-    private double tableShouldReceiveInterest;
-    @ExcelColumn("表外应收利息(元)")
-    private double offBalanceSheetReceivables;
+//    @ExcelColumn("表内应收利息(元)")
+    private Double tableShouldReceiveInterest;
+//    @ExcelColumn("表外应收利息(元)")
+    private Double offBalanceSheetReceivables;
     @ExcelColumn("拖欠本金(元)")
-    private double defaultPrincipal;
+    private Double defaultPrincipal;
     @ExcelColumn("拖欠利息(元)")
-    private double defaultInterest;
+    private Double defaultInterest;
     @ExcelColumn("是否受托支付")
-    private double whetherToPay;
+    private Double whetherToPay;
     @ExcelColumn("受托支付金额(元)")
-    private double trusteePaymentAmount;
+    private Double trusteePaymentAmount;
     @ExcelColumn("自主支付金额(元)")
-    private double selfPaidAmount;
+    private Double selfPaidAmount;
     @ExcelColumn("已支付金额(元)")
-    private double paidAmount;
+    private Double paidAmount;
     @ExcelColumn("未支付金额(元)")
-    private double unpaidAmount;
+    private Double unpaidAmount;
     @ExcelColumn("风险状态")
     private String riskStat;
     @ExcelColumn("拖欠标识")
@@ -169,51 +169,51 @@ public class Credit {
         this.repaymentMethod = repaymentMethod;
     }
 
-    public double getContractAmount() {
+    public Double getContractAmount() {
         return contractAmount;
     }
 
-    public void setContractAmount(double contractAmount) {
+    public void setContractAmount(Double contractAmount) {
         this.contractAmount = contractAmount;
     }
 
-    public double getLoanAmount() {
+    public Double getLoanAmount() {
         return loanAmount;
     }
 
-    public void setLoanAmount(double loanAmount) {
+    public void setLoanAmount(Double loanAmount) {
         this.loanAmount = loanAmount;
     }
 
-    public double getTotalLoanAmount() {
+    public Double getTotalLoanAmount() {
         return totalLoanAmount;
     }
 
-    public void setTotalLoanAmount(double totalLoanAmount) {
+    public void setTotalLoanAmount(Double totalLoanAmount) {
         this.totalLoanAmount = totalLoanAmount;
     }
 
-    public double getLoanBalance() {
+    public Double getLoanBalance() {
         return loanBalance;
     }
 
-    public void setLoanBalance(double loanBalance) {
+    public void setLoanBalance(Double loanBalance) {
         this.loanBalance = loanBalance;
     }
 
-    public double getLoanPeriod() {
+    public Double getLoanPeriod() {
         return loanPeriod;
     }
 
-    public void setLoanPeriod(double loanPeriod) {
+    public void setLoanPeriod(Double loanPeriod) {
         this.loanPeriod = loanPeriod;
     }
 
-    public double getAnnualPercentageRate() {
+    public Double getAnnualPercentageRate() {
         return annualPercentageRate;
     }
 
-    public void setAnnualPercentageRate(double annualPercentageRate) {
+    public void setAnnualPercentageRate(Double annualPercentageRate) {
         this.annualPercentageRate = annualPercentageRate;
     }
 
@@ -233,19 +233,19 @@ public class Credit {
         this.maturityDate = maturityDate;
     }
 
-    public double getReceivables() {
+    public Double getReceivables() {
         return receivables;
     }
 
-    public void setReceivables(double receivables) {
+    public void setReceivables(Double receivables) {
         this.receivables = receivables;
     }
 
-    public double getAlreadyReceivedPrincipal() {
+    public Double getAlreadyReceivedPrincipal() {
         return alreadyReceivedPrincipal;
     }
 
-    public void setAlreadyReceivedPrincipal(double alreadyReceivedPrincipal) {
+    public void setAlreadyReceivedPrincipal(Double alreadyReceivedPrincipal) {
         this.alreadyReceivedPrincipal = alreadyReceivedPrincipal;
     }
 
@@ -257,19 +257,19 @@ public class Credit {
         this.principalStartDate = principalStartDate;
     }
 
-    public double getInterestReceivable() {
+    public Double getInterestReceivable() {
         return interestReceivable;
     }
 
-    public void setInterestReceivable(double interestReceivable) {
+    public void setInterestReceivable(Double interestReceivable) {
         this.interestReceivable = interestReceivable;
     }
 
-    public double getInterestPaid() {
+    public Double getInterestPaid() {
         return interestPaid;
     }
 
-    public void setInterestPaid(double interestPaid) {
+    public void setInterestPaid(Double interestPaid) {
         this.interestPaid = interestPaid;
     }
 
@@ -281,75 +281,75 @@ public class Credit {
         this.interestStartDate = interestStartDate;
     }
 
-    public double getTableShouldReceiveInterest() {
+    public Double getTableShouldReceiveInterest() {
         return tableShouldReceiveInterest;
     }
 
-    public void setTableShouldReceiveInterest(double tableShouldReceiveInterest) {
+    public void setTableShouldReceiveInterest(Double tableShouldReceiveInterest) {
         this.tableShouldReceiveInterest = tableShouldReceiveInterest;
     }
 
-    public double getOffBalanceSheetReceivables() {
+    public Double getOffBalanceSheetReceivables() {
         return offBalanceSheetReceivables;
     }
 
-    public void setOffBalanceSheetReceivables(double offBalanceSheetReceivables) {
+    public void setOffBalanceSheetReceivables(Double offBalanceSheetReceivables) {
         this.offBalanceSheetReceivables = offBalanceSheetReceivables;
     }
 
-    public double getDefaultPrincipal() {
+    public Double getDefaultPrincipal() {
         return defaultPrincipal;
     }
 
-    public void setDefaultPrincipal(double defaultPrincipal) {
+    public void setDefaultPrincipal(Double defaultPrincipal) {
         this.defaultPrincipal = defaultPrincipal;
     }
 
-    public double getDefaultInterest() {
+    public Double getDefaultInterest() {
         return defaultInterest;
     }
 
-    public void setDefaultInterest(double defaultInterest) {
+    public void setDefaultInterest(Double defaultInterest) {
         this.defaultInterest = defaultInterest;
     }
 
-    public double getWhetherToPay() {
+    public Double getWhetherToPay() {
         return whetherToPay;
     }
 
-    public void setWhetherToPay(double whetherToPay) {
+    public void setWhetherToPay(Double whetherToPay) {
         this.whetherToPay = whetherToPay;
     }
 
-    public double getTrusteePaymentAmount() {
+    public Double getTrusteePaymentAmount() {
         return trusteePaymentAmount;
     }
 
-    public void setTrusteePaymentAmount(double trusteePaymentAmount) {
+    public void setTrusteePaymentAmount(Double trusteePaymentAmount) {
         this.trusteePaymentAmount = trusteePaymentAmount;
     }
 
-    public double getSelfPaidAmount() {
+    public Double getSelfPaidAmount() {
         return selfPaidAmount;
     }
 
-    public void setSelfPaidAmount(double selfPaidAmount) {
+    public void setSelfPaidAmount(Double selfPaidAmount) {
         this.selfPaidAmount = selfPaidAmount;
     }
 
-    public double getPaidAmount() {
+    public Double getPaidAmount() {
         return paidAmount;
     }
 
-    public void setPaidAmount(double paidAmount) {
+    public void setPaidAmount(Double paidAmount) {
         this.paidAmount = paidAmount;
     }
 
-    public double getUnpaidAmount() {
+    public Double getUnpaidAmount() {
         return unpaidAmount;
     }
 
-    public void setUnpaidAmount(double unpaidAmount) {
+    public void setUnpaidAmount(Double unpaidAmount) {
         this.unpaidAmount = unpaidAmount;
     }
 

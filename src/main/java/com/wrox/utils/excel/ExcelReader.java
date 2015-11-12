@@ -336,8 +336,6 @@ public class ExcelReader {
 
         ExcelStyleDateFormatter dateFormatter = new ExcelStyleDateFormatter("yyyy-MM-dd");
 
-        System.out.println(new CellReference(cell).formatAsString() + " - " + formatter.formatCellValue(cell));
-
         int cellType = cell.getCellType();
         if (cellType == Cell.CELL_TYPE_FORMULA) {   // 单元格为公式，将公式计算后在进行取值。
             if (Objects.isNull(evaluator)) {

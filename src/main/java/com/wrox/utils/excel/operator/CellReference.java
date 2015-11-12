@@ -40,16 +40,33 @@ public class CellReference implements Comparable<CellReference> {
      */
     private final int col;
 
+    /**
+     * 通过单元格名称构造CellReference对象。
+     *
+     * @param r 单元格名称，格式为列名称+行索引，例如：A1。
+     */
     public CellReference(String r) {
         this.row = getRowIndex(r);
         this.col = getColIndex(r);
     }
 
+    /**
+     * 通过行索引和列索引构造CellReference对象。
+     *
+     * @param row 行索引
+     * @param col 列索引
+     */
     public CellReference(int row, int col) {
         this.row = row;
         this.col = col;
     }
 
+    /**
+     * 通过行索引和列索引名构造CellReference对象。
+     *
+     * @param row 行索引
+     * @param colName 列索引名
+     */
     public CellReference(int row, String colName) {
         this.row = row;
         this.col = toNumber(colName);

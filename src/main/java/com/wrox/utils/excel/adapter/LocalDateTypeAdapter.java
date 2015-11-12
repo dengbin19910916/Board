@@ -7,27 +7,26 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Created by dengb on 2015/11/11.
+ * LocalDate的类型适配器。
+ *
+ * @author dengb
+ * @version 1.0
  */
 public class LocalDateTypeAdapter implements JsonSerializer<LocalDate>, JsonDeserializer<LocalDate> {
 
     private String dateFormat;
 
-    public LocalDateTypeAdapter() {
-        this.dateFormat = "yyyy-MM-dd";
-    }
-
     public LocalDateTypeAdapter(String dateFormat) {
-        this.dateFormat = dateFormat;
+        this.dateFormat = dateFormat == null ? "yyyy-MM-dd" : dateFormat;
     }
 
     @Override
     public LocalDate deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        return LocalDate.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        return LocalDate.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern(dateFormat));
     }
 
     @Override
     public JsonElement serialize(LocalDate src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        return new JsonPrimitive(src.format(DateTimeFormatter.ofPattern(dateFormat)));
     }
 }

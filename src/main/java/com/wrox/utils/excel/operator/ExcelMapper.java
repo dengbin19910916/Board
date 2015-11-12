@@ -13,7 +13,13 @@ import java.util.Map;
 public interface ExcelMapper {
 
     /**
-     * 将Excel数据匹配到Java对象中。
+     * 将Excel数据匹配到Java对象中。<br/>
+     * 匹配方法是通过列名进行匹配，例如：
+     * 表头：A    - 姓名
+     * 字典：姓名 - name
+     * 内容：A    - 张三
+     * <br/>
+     * 需要注意的是参数contents中包含表头数据，在进行数据匹配时需要先过滤掉表头数据再进行匹配。
      *
      * @param clazz    Java对象类型。
      * @param contents 需要进行匹配的数据。

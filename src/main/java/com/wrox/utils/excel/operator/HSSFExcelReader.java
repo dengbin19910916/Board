@@ -1,5 +1,19 @@
 package com.wrox.utils.excel.operator;
 
+import com.wrox.Test;
+import org.apache.poi.hssf.eventusermodel.HSSFEventFactory;
+import org.apache.poi.hssf.eventusermodel.HSSFListener;
+import org.apache.poi.hssf.eventusermodel.HSSFRequest;
+import org.apache.poi.hssf.record.*;
+import org.apache.poi.hssf.usermodel.examples.EventExample;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 07及以上版本的Excel工作簿的读取，采用事件处理方式。
  *
@@ -7,22 +21,21 @@ package com.wrox.utils.excel.operator;
  * @author dengb
  * @version 1.0
  */
-/*public class HSSFExcelReader implements ExcelReader {
+public class HSSFExcelReader implements ExcelReader {
 
     private HSSFEventHandler handler;
 
     @Override
-    public <T> T[] readSheets(Class<T> clz, int... sheetIndex) {
+    public List<Map<String, String>> readSheets(int... sheetIndex) {
         return null;
     }
 
     public static class HSSFEventHandler implements HSSFListener {
-
         private SSTRecord sstRec;
 
         @Override
         public void processRecord(Record record) {
-            *//*switch (record.getSid()) {
+            switch (record.getSid()) {
                 case BOFRecord.sid:
                     BOFRecord bof = (BOFRecord) record;
                     switch (bof.getType()) {
@@ -57,7 +70,7 @@ package com.wrox.utils.excel.operator;
                     LabelSSTRecord lRec = (LabelSSTRecord) record;
                     System.out.println("String cell found with value " + sstRec.getString(lRec.getSSTIndex()));
                     break;
-            }*//*
+            }
         }
 
         public static void main(String[] args) throws IOException {
@@ -73,4 +86,4 @@ package com.wrox.utils.excel.operator;
 //            System.out.println("done.");
         }
     }
-}*/
+}

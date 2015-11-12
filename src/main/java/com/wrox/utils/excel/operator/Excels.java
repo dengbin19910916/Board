@@ -1,7 +1,5 @@
 package com.wrox.utils.excel.operator;
 
-import com.wrox.Test;
-import com.wrox.utils.excel.Clerk;
 import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
 import org.xml.sax.SAXException;
 
@@ -9,7 +7,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 
 /**
  * Excel文件处理的工具类。
@@ -73,10 +70,40 @@ public class Excels {
      * Excels对象的构造器。
      */
     public static class Builder {
-        private ExcelMapper mapper;
+        private String dateFormat = "yyyy-MM-dd";
+        private String timeFormat = "HH:mm:ss";
+        private String dateTimeFormat = "yyyy-MM-dd HH:mm:ss";
 
-        public Builder setDateFormat(String dateFormat) {
-            this.mapper = new AnnotationExcelMapper(dateFormat);
+        /**
+         * 设置LocalDate的解析格式。
+         *
+         * @param dateFormat LocalDate的解析格式。
+         * @return Excels的构造器。
+         */
+        public Builder setLocalDateFormat(String dateFormat) {
+            this.dateFormat = dateFormat;
+            return this;
+        }
+
+        /**
+         * 设置LocalTime的解析格式。
+         *
+         * @param timeFormat LocalTime的解析格式。
+         * @return Excels的构造器。
+         */
+        public Builder setLocalTimeFormat(String timeFormat) {
+            this.timeFormat = timeFormat;
+            return this;
+        }
+
+        /**
+         * 设置LocalDateTime的解析格式。
+         *
+         * @param dateTimeFormat LocalDateTime的解析格式。
+         * @return Excels的构造器。
+         */
+        public Builder setLocalDateTimeFormat(String dateTimeFormat) {
+            this.dateTimeFormat = dateTimeFormat;
             return this;
         }
 
@@ -90,23 +117,8 @@ public class Excels {
          */
         public Excels create() throws IOException, SAXException, OpenXML4JException {
             Excels e = new Excels();
-            e.setMapper(mapper);
+            e.setMapper(new AnnotationExcelMapper(dateFormat, timeFormat, dateTimeFormat));
             return e;
         }
-    }
-
-    public static void main(String[] args) throws OpenXML4JException, SAXException, IOException {
-        Excels excels = new Excels.Builder()
-                .setDateFormat("yyyy-MM-dd")
-                .create();
-//        Credit[] credits = excels.read(Credit.class, new File(Test.simple));
-        Clerk[] clerks = excels.read(Clerk.class, new File(Test.clerk));
-
-        println(clerks);
-    }
-
-    private static void println(Object[] array) {
-        int[] is = {0};
-        Arrays.asList(array).stream().forEach(data -> System.out.println((++is[0]) + " => " + data));
     }
 }
