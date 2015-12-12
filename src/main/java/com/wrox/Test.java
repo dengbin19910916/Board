@@ -1,10 +1,10 @@
 package com.wrox;
 
 import com.wrox.utils.excel.Book;
+import com.wrox.utils.excel.Clerk;
 import com.wrox.utils.excel.Credit;
 import com.wrox.utils.excel.operator.Excels;
 import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.xml.sax.SAXException;
 
 import java.io.File;
@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 public class Test {
 
-    private static final String root = Test.class.getResource("/").getPath() +"../../file/";
+    public static final String root = Test.class.getResource("/").getPath() +"../../file/";
 
     public static final File clerk = new File(root + "行员管理.xlsx");
     public static final File clerk2 = new File(root + "行员管理.xls");
@@ -33,17 +33,19 @@ public class Test {
                 .setLocalDateFormat("yyyy/M/d")
 //                .setLocalDateFormat("yyyy-MM-dd")
                 .create();
-//        Book[] books = excels.read(Book.class, Test.book);
-        Credit[] credits = excels.read(Credit.class, Test.simple2);
+        Book[] books = excels.read(Book.class, Test.book);
+        Credit[] credits = excels.read(Credit.class, Test.credit);
 //        Credit[] credits = excels.read(Credit.class, Test.simple);
-//        Clerk[] clerks = excels.read(Clerk.class, Test.clerk);
+        Clerk[] clerks = excels.read(Clerk.class, Test.clerk);
 
 //        println(books);
         println(credits);
 //        println(clerks);
 
-        Book[] books = com.wrox.utils.excel.Excels.read(Book.class, WorkbookFactory.create(book));
-        println(books);
+//        Book[] books = com.wrox.utils.excel.Excels.read(Book.class, WorkbookFactory.create(book));
+//        Credit[] cs = com.wrox.utils.excel.Excels.read(Credit.class, WorkbookFactory.create(credit));
+//        println(books);
+//        println(cs);
     }
 
     private static void println(Object[] array) {

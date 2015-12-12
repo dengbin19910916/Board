@@ -3,6 +3,7 @@ package com.wrox.filters;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
@@ -22,9 +23,15 @@ public class CharacterFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        if (response instanceof HttpServletResponse) {
+            ((HttpServletResponse) response).setDateHeader("Expires", -1);
+            ((HttpServletResponse) response).setHeader("Cache_Control", "no-cache");
+            ((HttpServletResponse) response).setHeader("Pragma", "no-cache");
+        }
+
         if (this.encoding != null) {
             request.setCharacterEncoding(encoding);
-            response.setContentType("text/html;charset=" + encoding);   // 让浏览器用UTF-8来解析返回的数据
+//            response.setContentType("text/html;charset=" + encoding);   // 让浏览器用UTF-8来解析返回的数据
             response.setCharacterEncoding(encoding);    // Servlet用UTF-8转码
         }
         chain.doFilter(request, response);

@@ -32,6 +32,9 @@ import java.util.*;
 public class XSSFExcelReader implements ExcelReader {
     private static final Logger log = LogManager.getLogger();
 
+    /**
+     * Excel工作簿的所有数据集合。
+     */
     private List<Map<String, String>> workbookData;
     /**
      * Excel文档阅读器，用于读取Excel的底层XML文件。

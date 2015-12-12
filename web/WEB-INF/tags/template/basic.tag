@@ -16,6 +16,7 @@
         <a href="<c:url value="/session/list" />">会话列表</a><br/>
         <a href="<c:url value="/clerk/portfolio"/>">业务量</a><br/>
         <a href="<c:url value="/clerk/indicator"/>">指标</a><br/>
+        <a href="<c:url value="/hr/list"/>">人员信息</a><br/>
         <a href="<c:url value="/logout" />">注销</a><br/>
         <jsp:invoke fragment="extraNavigationContent"/>
     </jsp:attribute>

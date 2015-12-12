@@ -1,5 +1,7 @@
 package com.wrox.utils.excel.annotation;
 
+import com.wrox.utils.excel.ExcelType;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

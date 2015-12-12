@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.common.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/styles/kendo.office365.min.css"/>">
 
-    <script src="<c:url value="/resources/js/jquery-2.1.4.js"/>"></script>
+    <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/js/kendo.all.min.js"/>"></script>
     <script src="<c:url value="/resources/js/cultures/kendo.culture.zh-CN.min.js"/>"></script>
     <script src="<c:url value="/resources/js/messages/kendo.messages.zh-CN.min.js"/>"></script>

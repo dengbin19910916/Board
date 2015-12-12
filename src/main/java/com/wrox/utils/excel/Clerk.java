@@ -2,7 +2,6 @@ package com.wrox.utils.excel;
 
 import com.wrox.utils.excel.annotation.ExcelColumn;
 import com.wrox.utils.excel.annotation.ExcelSheet;
-import com.wrox.utils.excel.annotation.ExcelType;
 import com.wrox.utils.excel.annotation.ExcelWorkbook;
 
 import java.text.SimpleDateFormat;

@@ -30,7 +30,7 @@
 <br/>
 <c:set var="action"><c:url value="/discussion/${discussion.id}/reply"/></c:set>
 <form:form method="post" action="${action}" modelAttribute="replyForm">
-    <form:label path="user">用户（邮箱）：</form:label><br/>
+    <form:label for="user" path="user">用户（邮箱）：</form:label><br/>
     <form:input path="user" type="email"/><br/>
     <br/>
     <form:label path="message">消息：</form:label><br/>
