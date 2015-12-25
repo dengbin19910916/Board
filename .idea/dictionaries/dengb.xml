@@ -2,6 +2,7 @@
   <dictionary name="dengb">
     <words>
       <w>colspan</w>
+      <w>doctype</w>
       <w>groupable</w>
       <w>indexs</w>
       <w>inlinestr</w>
@@ -11,6 +12,7 @@
       <w>textbox</w>
       <w>xerces</w>
       <w>xssf</w>
+      <w>zeroize</w>
     </words>
   </dictionary>
 </component>

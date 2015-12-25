@@ -4,6 +4,62 @@
  * Created by dengb on 2015/12/9.
  */
 
+function ChineseDateFormatSymbols() {
+    this.getEras = function() {
+        return ["公元前", "公元"];
+    };
+    this.getAmPmStrings = function() {
+        return ["上午", "下午"];
+    };
+    this.getMonths = function() {
+        return ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+    };
+    this.getShortMonths = function() {
+        return ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+    };
+    this.getWeekdays = function() {
+        return ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    };
+    this.getShortWeekdays = function() {
+        return ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    }
+}
+
+function EnglishDateFormatSymbols() {
+    this.getEras = function() {
+        return ["BD", "AD"];
+    };
+    this.getAmPmStrings = function() {
+        return ["AM", "PM"];
+    };
+    this.getMonths = function() {
+        return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    };
+    this.getShortMonths = function() {
+        return ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    };
+    this.getWeekdays = function() {
+        return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    };
+    this.getShortWeekdays = function() {
+        return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    }
+}
+
+function DateFormatSymbolsFactory(date, locale) {
+    var instance = null;
+    switch (locale) {
+        case "zh-CN":
+            instance = new ChineseDateFormatSymbols(date);
+            break;
+        default:
+            instance = new EnglishDateFormatSymbols(date);
+    }
+    this.create = function() {
+        return instance;
+    };
+}
+
 /**
  * 当且仅当此数组包含指定的值时，返回 true。
  *
@@ -11,7 +67,7 @@
  * @returns {boolean} 如果此数组包含 value，则返回 true，否则返回 false
  */
 Array.prototype.contains = function(value) {
-    for (var i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         if (this[i] === value) {
             return true;
         }
@@ -37,10 +93,16 @@ Date.prototype.getDayOfYear = function () {
     return this.firstDayOfYear(this.isLeapYear()) + this.getDate() - 1;
 };
 
-Date.prototype.firstDayOfYear = function () {
-    var month = this.getMonth() + 1;
+/**
+ * 返回所在月份的第一天在一年中的位置。
+ *
+ * @param month 月份从0开始
+ * @returns {number} 所在月份的第一天在一年中的索引位置，从1开始。
+ */
+Date.prototype.firstDayOfYear = function (month) {
+    var m = month + 1 || this.getMonth() + 1;
     var leap = this.isLeapYear() ? 1 : 0;
-    switch (month) {
+    switch (m) {
         case 1:
             return 1;
         case 2:
@@ -68,21 +130,49 @@ Date.prototype.firstDayOfYear = function () {
     }
 };
 
+/*
+    内部所包含的函数：
+    1、zeroize()函数用来为每一个每一类数据进行长度格式对齐。
+    2、length()函数用来获取每一种数据的长度。
+    3、
+ */
 /**
  * 日期对象的format()函数，输出格式化之后的日期字符串。
  *
- * @param pattern 日期格式。
- * @returns {*} 格式化日期字符串。
+ * @param pattern 日期格式
+ * @param locale
+ * @returns {*} 格式化日期字符串
  */
-Date.prototype.format = function (pattern, local) {
+Date.prototype.format = function (pattern, locale) {
+    /**
+     * 将结果补0对齐格式长度。
+     *
+     * @param value 需要补0的值
+     * @param length 格式长度
+     * @returns {string} 补0后的值
+     */
+    let zeroize = function(value, length) {
+        length = length || 1;
+        let zeros = '';
+        for (let i = 0; i < (length - String(value).length); i++) {
+            zeros += '0';
+        }
+        return zeros + value;
+    };
+
+    let dfs = new DateFormatSymbolsFactory(this, locale || "zh-CN").create();   // 获取日期格式化字符表
+
     if (/(y+)/.test(pattern)) {
         var length = RegExp.$1.length == 3 || RegExp.$1.length == 4 ? 4 : RegExp.$1.length;
     }
-    var imp = ["M+", "d+", "H+", "m+", "s+"];
-    var patterns = {
-        "G": "AD",  // Era标识符，AD
+    let imp = ["M+", "d+", "H+", "m+", "s+"];
+    let local = ["G+", "M+", "E+"];
+    let patterns = {
+        //"G+": this.getFullYear() < 0 ? dfs.getEras()[0] : dfs.getEras()[1],  // Era标识符，AD
+        "G+": getMessage("G+", dfs.getEras(), this.getFullYear()),
         "y+": (this.getFullYear() + "").substring(4 - length),   // 年，1996; 96
-        "M+": this.getMonth() + 1,  // 年中的月份，July; Jul; 07
+        //"M+": this.getMonth() + 1,  // 年中的月份，July; Jul; 07
+        "M+": getMessage("M+", dfs.getMonths(), this.getMonth() + 1),
         "w+": Math.ceil(this.getDayOfYear() / 7),   // 年中的周数，27
         "W+": Math.ceil(this.getDate() / 7),        // 月份中的周数，2
         "D+": this.getDayOfYear(),  // 年中的天数，189
@@ -97,27 +187,41 @@ Date.prototype.format = function (pattern, local) {
         "m+": this.getMinutes(),        // 小时中的分钟数，30
         "s+": this.getSeconds(),        // 分钟的秒数，55
         "S+": this.getMilliseconds(),   // 毫秒数，978
-        "z+": null,                     // 时区，Pacific Standard Time; PST; GMT-08:00
-        "Z+": null                      // 时区， -0800
+        "z+": this.toUTCString(),                     // 时区，Pacific Standard Time; PST; GMT-08:00
+        "Z+": this.toISOString()        // 时区， -0800
     };
-    /*if (/(y+)/.test(pattern)) {
-        pattern = pattern.replace(RegExp.$1, (this.getFullYear() + "")
-            .substring(4 - (RegExp.$1.length == 3 || RegExp.$1.length == 4 ? 4 : RegExp.$1.length)));
-    }*/
-    for (var p in patterns) {
+
+    for (let p in patterns) {
         if (new RegExp("(" + p + ")").test(pattern)) {
             if (patterns.hasOwnProperty(p)) {
                 if (imp.contains(p)) {
-                    pattern = pattern.replace(RegExp.$1, RegExp.$1.length == 1 ? patterns[p] : ("00" + patterns[p]).substring((patterns[p] + "").length));
+                    pattern = pattern.replace(RegExp.$1, zeroize(patterns[p], RegExp.$1.length));
                 } else {
-                    pattern = pattern.replace(RegExp.$1, patterns[p]);
+                    pattern = pattern.replace(RegExp.$1, zeroize(patterns[p], RegExp.$1.length));
                 }
             }
         }
     }
     return pattern;
-};
 
+    /**
+     * 返回模式字段的信息。
+     *
+     * @param p 字段模式
+     * @param values 字段值所在数组
+     * @param value 字段值
+     * @returns {*} 字段信息
+     */
+    function getMessage(p, values, value) {
+        
+
+        if (values) {
+            return 0;
+        }else {
+            return "1";
+        }
+    }
+};
 
 /*
  G  Era 标志符  Text  AD

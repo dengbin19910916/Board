@@ -1,3 +1,4 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ tag body-content="scriptless" trimDirectiveWhitespaces="true" pageEncoding="UTF-8" %>
 <%@ attribute name="htmlTitle" type="java.lang.String" rtexprvalue="true" required="true" %>
 <%@ attribute name="bodyTitle" type="java.lang.String" rtexprvalue="true" required="true" %>
@@ -24,7 +25,6 @@
     <script type="text/javascript">
         kendo.culture("zh-CN");
     </script>
-    <%--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>--%>
     <%--<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>--%>
     <script type="text/javascript" lang="javascript">
         var postInvisibleForm = function (url, fields) {

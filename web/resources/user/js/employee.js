@@ -6,6 +6,7 @@
 
 function loadInfo(id) {
     $(document).ready(function() {
+
         //noinspection JSUnresolvedFunction
         $("#gender").kendoDropDownList({
             dataTextField: "text",
@@ -71,7 +72,7 @@ function loadInfo(id) {
         $.getJSON("http://localhost:8080/board/hr/load", null, function(data) {
             setValue("name", data["name"]);
             setValue("gender", data["gender"], "kendoDropDownList");
-            setValue("birthday", new Date(data["birthday"]).format("yyyy-MM-dd"), "kendoDatePicker");
+            setValue("birthday", new Date(data["birthday"]).format("yyyy-MMM-dd"), "kendoDatePicker");
             calculateAge();
         });
 
